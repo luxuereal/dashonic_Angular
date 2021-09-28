@@ -1,4 +1,4 @@
-# Dashonic
+# Dashonic - Angular 12 responsive dashboard template
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
