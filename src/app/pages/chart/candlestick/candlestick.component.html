@@ -1,0 +1,66 @@
+<!-- start page title -->
+<app-pagetitle title="Candlestick Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic Candlestick Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/candlestick-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="basic_candlestick" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="basicCandlestickChart.series" [chart]="basicCandlestickChart.chart"
+                        [xaxis]="basicCandlestickChart.xaxis" [yaxis]="basicCandlestickChart.yaxis"
+                        [title]="basicCandlestickChart.title"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Candlestick Synced with Brush Chart (Combo)</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/candlestick-charts/combo/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="combo_candlestick" class="apex-charts" dir="ltr">
+                    <apx-chart #chartCandle [series]="chartCandleOptions.series" [chart]="chartCandleOptions.chart"
+                        [xaxis]="chartCandleOptions.xaxis" [plotOptions]="chartCandleOptions.plotOptions"></apx-chart>
+                </div>
+                <div id="combo_candlestick_chart" class="apex-charts" dir="ltr">
+                    <apx-chart #chartBar [series]="chartBarOptions.series" [chart]="chartBarOptions.chart"
+                        [xaxis]="chartBarOptions.xaxis" [yaxis]="chartBarOptions.yaxis"
+                        [dataLabels]="chartBarOptions.dataLabels" [stroke]="chartBarOptions.stroke"
+                        [plotOptions]="chartBarOptions.plotOptions"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Category X-Axis</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/candlestick-charts/category-x-axis/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="category_candlestick" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="categoryXAxisChart.series" [chart]="categoryXAxisChart.chart"
+                        [xaxis]="categoryXAxisChart.xaxis" [yaxis]="categoryXAxisChart.yaxis"
+                        [title]="categoryXAxisChart.title" [tooltip]="categoryXAxisChart.tooltip"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+
+</div><!-- end row -->

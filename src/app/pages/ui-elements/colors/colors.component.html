@@ -1,0 +1,27 @@
+<!-- start page title -->
+<app-pagetitle title="Colors" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xl-3 col-md-6" *ngFor="let data of colorsData">
+        <div class="card">
+            <div class="card-body">
+                <div class="bg-light rounded-3 text-center overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-xl-6">
+                            <div class="{{data.lightcolor}}" style="height: 90px;"></div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="{{data.darkcolor}}" style="height: 90px;"></div>
+                        </div>
+                    </div><!-- end row -->
+                    <div class="py-3">
+                        <h5 class="font-size-16 text-primary">{{data.title}}</h5>
+                        <p class="mb-0 text-primary">Hex : {{data.hex}}</p>
+                        <p class="mb-0 text-primary">RGB : {{data.rgba}}</p>
+                    </div>
+                </div>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->

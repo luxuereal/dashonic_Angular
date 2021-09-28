@@ -1,0 +1,432 @@
+<!-- start page title -->
+<app-pagetitle title="Invoice List" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row align-items-start">
+                    <div class="col-sm">
+                        <div>
+                            <button type="button" class="btn btn-light mb-4" data-bs-toggle="modal"
+                                data-bs-target="#addInvoiceModal" (click)="openModal(content)"><i
+                                    class="mdi mdi-plus me-1"></i> Add Invoice</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <div class="d-flex gap-1">
+                            <div class="input-group">
+                                <input type="date" class="form-control" id="datepicker-range">
+                            </div>
+                            <div class="dropdown" ngbDropdown>
+                                <a class="btn btn-link text-body shadow-none dropdown-toggle" href="javascript:void(0);"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                                    <i class="uil uil-ellipsis-h"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <ng-template #content role="document" let-modal>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addContactModalLabel">Add Invoice</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            (click)="modal.dismiss('Cross click')"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body p-4">
+                            <aw-wizard [navBarLayout]="'large-empty-symbols'">
+                                <aw-wizard-step>
+                                    <ng-template awWizardStepSymbol>
+                                        <div class="wizard-list-item">
+                                            <div class="list-item">
+                                                <div class="step-icon" ngbTooltip="Basic Info" placement="top">
+                                                    <i class="uil uil-user-circle"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                    <div class="row">
+                                        <div class="text-center mb-4">
+                                            <h5>Customer Information</h5>
+                                            <p class="card-title-desc">Fill all information below</p>
+                                        </div>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label for="customerinfo-name-input" class="form-label">Customer
+                                                            Name :</label>
+                                                        <input type="text" class="form-control"
+                                                            id="customerinfo-name-input">
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="mb-3">
+                                                        <label for="customerinfo-email-input" class="form-label">Email
+                                                            :</label>
+                                                        <input type="email" class="form-control"
+                                                            id="customerinfo-email-input">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+
+                                                    <div class="mb-3">
+                                                        <label for="customerinfo-phone-input" class="form-label">Phone
+                                                            :</label>
+                                                        <input type="text" class="form-control"
+                                                            id="customerinfo-phone-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="customerinfo-address-input" class="form-label">Address
+                                                    :</label>
+                                                <textarea class="form-control" id="customerinfo-address-input"
+                                                    rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- wizard-tab -->
+                                    <ul class="list-inline wizard mb-0">
+                                        <li class="next list-inline-item float-end"><button type="button"
+                                                class="btn btn-primary w-sm" awNextStep>Next</button>
+                                        </li>
+                                    </ul>
+                                </aw-wizard-step>
+
+                                <aw-wizard-step>
+                                    <ng-template awWizardStepSymbol>
+                                        <div class="wizard-list-item">
+                                            <div class="list-item">
+                                                <div class="step-icon" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Assignee">
+                                                    <i class="uil uil-invoice"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                    <div class="row">
+                                        <div class="text-center mb-4">
+                                            <h5>Invoice Details</h5>
+                                            <p class="card-title-desc">Fill Invoice Details.</p>
+                                        </div>
+                                        <form>
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+
+                                                        <div class="mb-3">
+                                                            <label for="invoicenumberinput" class="form-label">Invoice
+                                                                #</label>
+                                                            <input type="text" class="form-control"
+                                                                id="invoicenumberinput">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Invoice Date</label>
+                                                            <input type="text" class="form-control"
+                                                                id="datepicker-invoice">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="invoicedescriptioninput"
+                                                                class="form-label">Description
+                                                                (Optional)</label>
+                                                            <input type="text" class="form-control"
+                                                                id="invoicedescriptioninput">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Payment method :</label>
+                                                            <select class="form-select">
+                                                                <option selected>Select Payment method</option>
+                                                                <option value="CR">Credit / Debit Card</option>
+                                                                <option value="PY">Paypal</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <ul class="list-inline wizard mb-0">
+                                        <li class="previous list-inline-item"><button type="button"
+                                                class="btn btn-primary" awPreviousStep>Previous</button>
+                                        </li>
+                                        <li class="next list-inline-item float-end"><button type="button"
+                                                class="btn btn-primary w-sm" awNextStep>Next</button>
+                                        </li>
+                                    </ul>
+                                </aw-wizard-step>
+
+                                <aw-wizard-step>
+                                    <ng-template awWizardStepSymbol>
+                                        <div class="wizard-list-item">
+                                            <div class="list-item">
+                                                <div class="step-icon" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Attached Files">
+                                                    <i class="uil uil-clipboard-notes"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                    <div class="row justify-content-center">
+                                        <div class="text-center ">
+                                            <h5>Order Summery</h5>
+                                            <p class="card-title-desc">Fill Order Summery Details.</p>
+                                        </div>
+                                        <form>
+                                            <div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-nowrap">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Item name</th>
+                                                                <th scope="col">Description</th>
+                                                                <th scope="col" width="120px">Price</th>
+                                                                <th scope="col" width="120px">Quantity</th>
+                                                                <th scope="col" width="120px">Total</th>
+                                                                <th scope="col" class="text-center">Action</th>
+                                                            </tr>
+
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <textarea class="form-control"
+                                                                            rows="2"></textarea>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text"
+                                                                            value="0.00" readonly>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="text-center">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="text-danger p-2 d-inline-block"
+                                                                            data-toggle="tooltip" data-placement="top"
+                                                                            title="Delete"><i
+                                                                                class="fas fa-trash-alt"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <textarea class="form-control"
+                                                                            rows="2"></textarea>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text">
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <input class="form-control" type="text"
+                                                                            value="0.00" readonly>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="text-center">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="text-danger p-2 d-inline-block"
+                                                                            data-toggle="tooltip" data-placement="top"
+                                                                            title="Delete"><i
+                                                                                class="fas fa-trash-alt"></i></a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row justify-content-end">
+                                                    <div class="col-xl-3 col-md-4">
+                                                        <div>
+                                                            <div>
+                                                                <h5 class="font-size-14 py-2">Sub Total : <span
+                                                                        class="float-end fw-normal text-body">0.00</span>
+                                                                </h5>
+                                                            </div>
+                                                            <div>
+                                                                <h5 class="font-size-14 py-2">Discount : <span
+                                                                        class="float-end fw-normal text-body"> -
+                                                                        0.00</span></h5>
+                                                            </div>
+                                                            <div>
+                                                                <h5 class="font-size-14 py-2">Shipping Charge :
+                                                                    <span class="float-end fw-normal text-body">
+                                                                        0.00</span>
+                                                                </h5>
+                                                            </div>
+                                                            <div>
+                                                                <h5 class="font-size-14 py-2">Tax : <span
+                                                                        class="float-end fw-normal text-body">
+                                                                        0.00</span></h5>
+                                                            </div>
+                                                            <div>
+                                                                <h5 class="font-size-14 py-2">Total : <span
+                                                                        class="float-end"> 0.00</span></h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <ul class="list-inline wizard mb-0">
+                                        <li class="previous list-inline-item"><button type="button"
+                                                class="btn btn-primary" awPreviousStep>Previous</button>
+                                        </li>
+                                    </ul>
+                                </aw-wizard-step>
+                            </aw-wizard>
+                        </div>
+                    </form>
+                </ng-template>
+                <!--End Modal -->
+
+                <div class="table-responsive mt-4 mt-sm-0 datatables">
+                    <table class="table align-middle table-nowrap table-check">
+                        <thead>
+                            <tr class="bg-transparent">
+                                <th style="width: 30px;">
+                                    <div class="form-check font-size-16">
+                                        <input type="checkbox" [(ngModel)]="masterSelected" class="form-check-input"
+                                            id="checkAll" (change)="checkUncheckAll()">
+                                        <label class="form-check-label" for="checkAll"></label>
+                                    </div>
+                                </th>
+                                <th (click)="sort('invoice_id')" [ngClass]="{'asc': isDesc && column == 'invoice_id', 'desc': !isDesc && column == 'invoice_id'}">Invoice Id</th>
+                                <th (click)="sort('date')" [ngClass]="{'asc': isDesc && column == 'date', 'desc': !isDesc && column == 'date'}">Date</th>
+                                <th  (click)="sort('billing_name')" [ngClass]="{'asc': isDesc && column == 'billing_name', 'desc': !isDesc && column == 'billing_name'}">Billing Name</th>
+                                <th  (click)="sort('amount')" [ngClass]="{'asc': isDesc && column == 'amount', 'desc': !isDesc && column == 'amount'}">Amount</th>
+                                <th (click)="sort('status')" [ngClass]="{'asc': isDesc && column == 'status', 'desc': !isDesc && column == 'status'}">Status</th>
+                                <th style="width: 120px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let table of tables$ | async;let i=index">
+                            <tr>
+                                <td>
+                                    <div class="form-check font-size-16">
+                                        <input type="checkbox" class="form-check-input" [(ngModel)]="table.isSelected"
+                                            id="contacusercheck1">
+                                        <label class="form-check-labe12"></label>
+                                    </div>
+                                </td>
+                                <td><a routerLink="/invoices/detail" class="text-dark fw-medium">
+                                        <ngb-highlight [result]="table.invoice_id" [term]="service.searchTerm">
+                                        </ngb-highlight>
+                                    </a>
+                                </td>
+                                <td>
+                                    <ngb-highlight [result]="table.date" [term]="service.searchTerm"></ngb-highlight>
+                                </td>
+                                <td>
+                                    <ngb-highlight [result]="table.billing_name" [term]="service.searchTerm">
+                                    </ngb-highlight>
+                                </td>
+                                <td>
+                                    <ngb-highlight [result]="table.amount" [term]="service.searchTerm"></ngb-highlight>
+                                </td>
+                                <td>
+                                    <ngb-highlight [result]="table.status" [term]="service.searchTerm"
+                                        class="badge badge-soft-success font-size-12"
+                                        [ngClass]=" { 'badge-soft-warning': table.status === 'Pending' }">
+                                    </ngb-highlight>
+                                </td>
+                                <td>
+                                    <div class="dropdown" ngbDropdown placement="bottom-right">
+                                        <button
+                                            class="btn btn-link font-size-16 shadow-none py-0 text-muted dropdown-toggle"
+                                            type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                            ngbDropdownToggle>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);">Print</a></li>
+                                            <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody><!-- end tbody -->
+                    </table><!-- end table -->
+                </div>
+
+                <!-- End table -->
+                <div class="row justify-content-md-between align-items-md-center mt-2">
+                    <div class="col-sm-12 col-md-5">
+                        <div class="dataTables_info mb-2" id="tickets-table_info" role="status" aria-live="polite">
+                            Showing
+                            {{service.startIndex}} to
+                            {{service.endIndex}} of {{service.totalRecords}}
+                            entries
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="col-sm-12 col-md-5">
+                        <div class="text-md-right float-md-end pagination-rounded">
+                            <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page"
+                                [pageSize]="service.pageSize">
+                            </ngb-pagination>
+                        </div>
+                    </div>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

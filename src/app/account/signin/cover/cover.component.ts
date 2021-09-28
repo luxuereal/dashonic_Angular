@@ -1,0 +1,46 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-cover',
+  templateUrl: './cover.component.html',
+  styleUrls: ['./cover.component.scss']
+})
+
+/**
+ * Cover Component
+ */
+export class CoverComponent implements OnInit {
+
+  // set the currenr year
+  year: number = new Date().getFullYear();
+  submitted = false;
+  loginForm!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    /**
+     * Form Validatyion
+     */
+    this.loginForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      password: ['', Validators.required],
+    });
+  }
+
+  // convenience getter for easy access to form fields
+  get f() { return this.loginForm.controls; }
+
+  /**
+   * Form submit
+   */
+  onSubmit() {
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.loginForm.invalid) {
+      return;
+    }
+  }
+
+}

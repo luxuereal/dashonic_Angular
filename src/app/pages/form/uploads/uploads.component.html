@@ -1,0 +1,25 @@
+<!-- start page title -->
+<app-pagetitle title="Form File Upload" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Dropzone</h4>
+                <a href="https://www.npmjs.com/package/ngx-dropzone-wrapper" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div>                   
+                    <dropzone class="dropzone" [config]="config"></dropzone>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="button" class="btn btn-primary">Send
+                        Files</button>
+                </div>
+            </div>
+        </div><!-- end card -->
+    </div> <!-- end col -->
+</div> <!-- end row -->

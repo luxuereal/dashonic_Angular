@@ -1,0 +1,101 @@
+<!-- start page title -->
+<app-pagetitle title="Horizontal Timline" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="hori-timeline">
+                    <!-- Swiper -->
+                    <div class="swiper-container slider">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <h5 class="card-title mb-4">Example</h5>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <div class="swiper-arrow d-flex gap-2 justify-content-end arrow-sm">
+                                    <div class="swiper-button-prev position-relative rounded-start"(click)="previousSlide()"></div>
+                                    <div class="swiper-button-next position-relative rounded-end" (click)="nextSlide()"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-container " [swiper]="config">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" *ngFor="let slide of slides">
+                                    <div class="event-list pb-2">
+                                        <div class="event-list-item">
+                                            <p class="font-size-13 text-primary">{{slide.year}}</p>
+                                            <h5 class="font-size-14 mb-1">{{slide.type}}</h5>
+                                            <p class="text-muted">{{slide.company}}</p>
+                                            <div>
+                                                <p class="text-muted text-truncate">{{slide.content}}</p>
+
+                                                <div>
+                                                    <a href="javascript:void(0);" class="text-primary">View Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="hori-timeline timeline-card">
+                    <!-- Swiper -->
+                    <div class="swiper-container" id="timeline-card-slider">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <h5 class="card-title mb-4">Timeline with Card</h5>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <div class="swiper-arrow d-flex gap-2 justify-content-end arrow-sm">
+                                    <div class="swiper-button-prev position-relative rounded-start" (click)="previousSlideComp()"></div>
+                                    <div class="swiper-button-next position-relative rounded-end" (click)="nextSlideComp()"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <swiper class="swiper-container" [config]="cardConfig">
+                            <div *ngFor="let slide of slides" class="swiper-slide">
+                                <div class="event-list">
+                                    <div class="event-list-item">
+                                        <p class="font-size-13 text-primary">{{slide.year}}</p>
+
+                                        <h5 class="font-size-14 mb-1">{{slide.type}}</h5>
+                                        <p class="text-muted">{{slide.company}}</p>
+
+                                        <div>
+                                            <p class="text-muted text-truncate">{{slide.content}}</p>
+
+                                            <div>
+                                                <a href="javascript:void(0);" class="text-primary">View Detail</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper>
+                    </div>
+                </div>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

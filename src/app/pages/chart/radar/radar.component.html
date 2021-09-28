@@ -1,0 +1,64 @@
+<!-- start page title -->
+<app-pagetitle title="Radar Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic Radar Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radar-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="basic_radar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="basicRadarChart.series" [chart]="basicRadarChart.chart"
+                        [xaxis]="basicRadarChart.xaxis" [stroke]="basicRadarChart.stroke"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Radar Chart - Multiple series</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radar-charts/radar-multiple-series/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="multi_radar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="multipleSeriesChart.series" [chart]="multipleSeriesChart.chart"
+                        [stroke]="multipleSeriesChart.stroke" [fill]="multipleSeriesChart.fill"
+                        [markers]="multipleSeriesChart.markers" [colors]="multipleSeriesChart.colors"
+                        [xaxis]="multipleSeriesChart.xaxis"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Radar Chart - Polygon Fill</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radar-charts/radar-with-polygon-fill/"
+                    target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="polygon_radar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="polygonFillChart.series" [chart]="polygonFillChart.chart"
+                        [xaxis]="polygonFillChart.xaxis" [stroke]="polygonFillChart.stroke"
+                        [colors]="polygonFillChart.colors" [dataLabels]="polygonFillChart.dataLabels"
+                        [tooltip]="polygonFillChart.tooltip" [plotOptions]="polygonFillChart.plotOptions"
+                        [markers]="polygonFillChart.markers" [yaxis]="polygonFillChart.yaxis"
+                        [fill]="polygonFillChart.fill" [title]="polygonFillChart.title"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->

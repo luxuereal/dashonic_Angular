@@ -1,0 +1,81 @@
+<!-- start page title -->
+<app-pagetitle title="Lightbox" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Single Image Lightbox</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6" *ngFor="let image of images; let i=index">
+                        <div class="">
+                            <div class="image-popup">
+                                <img [src]="image.thumb" (click)="openImage(i)" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Images with Description</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6" *ngFor="let image of gallery; let i=index">
+                        <div class="">
+                            <img [src]="image.thumb" (click)="openZoomGallery(i)" class="img-fluid" />
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Popup with Video or Map</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-light image-popup-video-map"
+                        (click)="openYoutubeModal(youtube)">Open YouTube Video</button>
+                    <ng-template #youtube role="document" let-modal>
+                        <div class="modal-header">
+                            <button type="button" class="btn-close bg-white" aria-hidden="true"
+                                (click)="modal.dismiss('Cross click')"></button>
+                        </div>
+                        <div class="modal-body">
+                            <youtube-player [videoId]="id" [height]="450"></youtube-player>
+                        </div>
+                    </ng-template>
+
+                    <button type="button" class="btn btn-light image-popup-video-map"
+                        (click)="openVimeoModal(vimeo)">Open Vimeo Video</button>
+                    <ng-template #vimeo role="document" let-modal>
+                        <div class="modal-header">
+                            <button type="button" class="btn-close bg-white" aria-hidden="true"
+                                (click)="modal.dismiss('Cross click')"></button>
+                        </div>
+                        <div class="modal-body vimeo_video">
+                            <iframe src="https://player.vimeo.com/video/403530213" height="450"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </ng-template>
+                </div>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->

@@ -1,0 +1,104 @@
+<!-- start page title -->
+<app-pagetitle title="Swiper Slider" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+<div class="row swiper-sliders">
+
+    <div class="col-xl-4 col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Default Swiper</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="swiper-container default-swiper" dir="ltr">
+                    <div class="swiper-wrapper">
+                        <swiper *ngIf="type == 'component' && show" class="" fxFlex="auto" [config]="config">
+                            <div *ngFor="let slide of slides" class="swiper-slide">
+                                <img src="{{slide.image}}" class="img-fluid mx-auto d-block" alt>
+                            </div>
+                        </swiper>
+                    </div><!-- end swiper wrapper -->
+                </div><!-- end swiper container -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4 col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Navigation Swiper</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="swiper-container navigation-swiper" dir="ltr">
+                    <swiper *ngIf="type == 'component' && show" class="" fxFlex="auto" [config]="navconfig">
+                        <div *ngFor="let slide of slides" class="swiper-slide">
+                            <img src="{{slide.image}}" class="img-fluid mx-auto d-block" alt>
+                        </div>
+                    </swiper>
+                </div><!-- end swiper container -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4 col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Pagination Swiper</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="swiper-container pagination-swiper" dir="ltr">
+                    <swiper *ngIf="type == 'component' && show" class="" fxFlex="auto" [config]="paginationconfig">
+                        <div *ngFor="let slide of slides" class="swiper-slide">
+                            <img src="{{slide.image}}" class="img-fluid mx-auto d-block" alt>
+                        </div>
+                    </swiper>
+                </div><!-- end swiper container -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4 col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Keyboard control</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="swiper-container keyboard-control" dir="ltr">
+                    <swiper *ngIf="type == 'component' && show" class="" fxFlex="auto" [config]="paginationconfig">
+                        <div *ngFor="let slide of slides" class="swiper-slide">
+                            <img src="{{slide.image}}" class="img-fluid mx-auto d-block" alt>
+                        </div>
+                    </swiper>
+                </div><!-- end swiper container -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row swiper-sliders">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Responsive Breakpoints</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="swiper-container responsive-swiper" dir="ltr">
+                    <swiper *ngIf="type == 'component' && show" class="" fxFlex="auto" [config]="multiconfig">
+                        <div *ngFor="let slide of slides" class="swiper-slide">
+                            <img src="{{slide.image}}" class="img-fluid mx-auto d-block" alt>
+                        </div>
+                    </swiper>
+                </div><!-- end swiper container -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->

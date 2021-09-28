@@ -1,0 +1,53 @@
+<!-- start page title -->
+<app-pagetitle title="Google maps" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Markers</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px">
+                </agm-map>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Overlays</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px">
+                    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+                </agm-map>
+            </div>
+        </div><!-- end card -->
+    </div> <!-- end col -->
+</div> <!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Street View Panoramas</h4>
+                <a href="javascript:void(0);" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 300px">
+                    <agm-circle [latitude]="latitude" [longitude]="longitude" [radius]="9000" [fillColor]="'red'"
+                        [circleDraggable]="true" [editable]="true">
+                    </agm-circle>
+                </agm-map>
+            </div><!-- end card body-->
+        </div><!-- end card -->
+    </div> <!-- end col -->
+</div> <!-- end row -->

@@ -1,0 +1,1016 @@
+<!-- start page title -->
+<app-pagetitle title="Project Overview" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body pb-0">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="avatar">
+                                    <div class="avatar-title bg-soft-primary text-primary font-size-18 rounded">
+                                        D
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="text-muted">
+                                    <h5 class="font-size-16 mb-1">Dashonic Admin</h5>
+                                    <p class="mb-0">Neque porro quisquam est, quia dolor sit amet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-auto">
+                        <div>
+                            <div class="d-flex flex-wrap align-items-start justify-content-md-end gap-2 mb-3">
+                                <div class="dropdown" ngbDropdown>
+                                    <a class="btn btn-light dropdown-toggle" href="javascript:void(0);" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        ngbDropdownToggle>
+                                        <i class=" uil uil-bell"></i><span
+                                            class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1"><span
+                                                class="visually-hidden">unread messages</span></span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" ngbDropdownMenu>
+                                        <div class="px-3 py-2">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <h5 class="font-size-15 m-0"> Notifications </h5>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div class="badge bg-success rounded-pill">02</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ngx-simplebar style="max-height: 190px;">
+                                            <a href="javascript:void(0);" class="dropdown-item p-3">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-shrink-0 avatar-sm align-self-center me-3">
+                                                        <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="font-size-13 mb-1">James Lemire</h5>
+                                                        <div class="font-size-12">
+                                                            <p class="text-muted text-truncate mb-0">If several
+                                                                languages coalesce the grammar</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted font-size-12 mb-0"><i
+                                                            class="mdi mdi-clock-outline"></i> 3 Mins</p>
+                                                </div>
+                                            </a>
+
+                                            <a href="javascript:void(0);" class="dropdown-item p-3">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-shrink-0 avatar-sm align-self-center me-3">
+                                                        <div class="avatar-title rounded-circle bg-light text-primary">
+                                                            <i class="uil uil-bug"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="font-size-13 mb-1">Bug Report</h5>
+                                                        <div class="font-size-12">
+                                                            <p class="text-muted text-truncate mb-0">Donec pede justo,
+                                                                fringilla vel, aliquet nec, vulputate eget</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted font-size-12 mb-0"><i
+                                                            class="mdi mdi-clock-outline"></i> 2 Hrs</p>
+                                                </div>
+                                            </a>
+
+                                            <a href="javascript:void(0);" class="dropdown-item p-3">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-shrink-0 avatar-sm align-self-center me-3">
+                                                        <div class="avatar-title rounded-circle bg-light text-primary">
+                                                            <i class="uil uil-list-ul"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="font-size-13 mb-1">New Updates for Theme</h5>
+                                                        <div class="font-size-12">
+                                                            <p class="text-muted text-truncate mb-0">Etiam sit amet orci
+                                                                eget eros faucibus tincidunt.</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted font-size-12 mb-0"><i
+                                                            class="mdi mdi-clock-outline"></i> 4 Hrs</p>
+                                                </div>
+                                            </a>
+
+                                            <a href="javascript:void(0);" class="dropdown-item p-3">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-shrink-0 avatar-sm align-self-center me-3">
+                                                        <img src="assets/images/users/avatar-4.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="font-size-13 mb-1">Salena Layfield</h5>
+                                                        <div class="font-size-12">
+                                                            <p class="text-muted text-truncate mb-0">Aenean leo ligula,
+                                                                porttitor eu, consequat vitae, eleifend ac</p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted font-size-12 mb-0"><i
+                                                            class="mdi mdi-clock-outline"></i> 12/09</p>
+                                                </div>
+                                            </a>
+                                        </ngx-simplebar>
+                                        <div class="pt-2 border-top">
+                                            <a class="btn btn-sm btn-link font-size-14 w-100 text-center"
+                                                href="javascript:void(0)">
+                                                <i class="uil uil-angle-right-b mr-1"></i> View More..
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown" ngbDropdown>
+                                    <a class="btn btn-link text-dark dropdown-toggle shadow-none"
+                                        href="javascript:void(0);" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false" ngbDropdownToggle>
+                                        <i class="uil uil-ellipsis-h"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="mt-3">
+                            <ul class="text-muted">
+                                <li class="py-1">Sed ut perspiciatis unde omnis iste</li>
+                                <li class="py-1">It va esser tam simplic quam</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="d-flex align-items-center mt-4">
+                                    <div class="flex-shrink-0 me-3">
+                                        <i class="uil uil-calendar-alt text-primary font-size-22"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="font-size-12 mb-1">Start Date</h5>
+                                        <p class="text-muted mb-0">06 Mar, 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="d-flex align-items-center mt-4">
+                                    <div class="flex-shrink-0 me-3">
+                                        <i class="uil uil-check-circle text-primary font-size-22"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="font-size-12 mb-1">Due Date</h5>
+                                        <p class="text-muted mb-0">15 May, 2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end row -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="mt-3">
+                    <!-- Nav tabs -->
+                    <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav nav-tabs nav-tabs-custom">
+                        <li [ngbNavItem]="1" class="nav-item">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <div class="">
+                                    <div class="tab-pane active" id="overview" role="tabpanel">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-xl-3 col-sm-6">
+                                                        <div class="card border shadow-none">
+                                                            <div class="card-body">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-light text-primary rounded-circle font-size-18">
+                                                                                <i class="uil uil-list-ul"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="mb-1 text-truncate text-muted">Total
+                                                                            Tasks</p>
+                                                                        <h5 class="font-size-16 mb-0">21</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end card body -->
+                                                        </div><!-- end card -->
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3 col-sm-6">
+                                                        <div class="card border shadow-none">
+                                                            <div class="card-body">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-light text-primary rounded-circle font-size-18">
+                                                                                <i class="uil uil-check-circle"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="mb-1 text-truncate text-muted">
+                                                                            Completed Tasks</p>
+                                                                        <h5 class="font-size-16 mb-0">10</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end card body -->
+                                                        </div><!-- end card -->
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3 col-sm-6">
+                                                        <div class="card border shadow-none">
+                                                            <div class="card-body">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-light text-primary rounded-circle font-size-18">
+                                                                                <i class="uil uil-users-alt"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="mb-1 text-truncate text-muted">Members
+                                                                        </p>
+                                                                        <h5 class="font-size-16 mb-0">12</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end card body -->
+                                                        </div><!-- end card -->
+                                                    </div><!-- end col -->
+                                                    <div class="col-xl-3 col-sm-6">
+                                                        <div class="card border shadow-none">
+                                                            <div class="card-body">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-light text-primary rounded-circle font-size-18">
+                                                                                <i class="uil uil-clock-eight"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="mb-1 text-truncate text-muted">Total
+                                                                            Hours</p>
+                                                                        <h5 class="font-size-16 mb-0">3224</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end card body-->
+                                                        </div><!-- end card -->
+                                                    </div> <!-- end col -->
+                                                </div><!-- end row -->
+
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <div class="card border shadow-none h-100 mb-lg-0">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title mb-4">Description</h5>
+
+                                                                <div class="text-muted">
+                                                                    <P>If several languages coalesce, the grammar of the
+                                                                        resulting language is
+                                                                        more simple and regular than that of the
+                                                                        individual languages. The new
+                                                                        common language will be more simple and regular
+                                                                        than the existing.</P>
+                                                                    <p>To achieve this, it would be necessary to have
+                                                                        uniform grammar,
+                                                                        pronunciation and more common words.</p>
+
+                                                                    <ul class="ps-3">
+                                                                        <li class="py-1">Cras ultricies mi eu turpis
+                                                                            hendrerit</li>
+                                                                        <li class="py-1">Lorem ipsum dolor sit amet</li>
+                                                                        <li class="py-1">Duis arcu tortor, suscipit eget
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div><!-- end card body -->
+                                                        </div><!-- end card -->
+                                                    </div><!-- end col -->
+                                                    <div class="col-lg-4">
+                                                        <div class="card border shadow-none h-100 mb-lg-0">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title mb-3">Task Status</h5>
+
+                                                                <div>
+                                                                    <div class="py-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14">Design</h5>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted mb-0">07/12</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress mt-2">
+                                                                            <div class="progress-bar" role="progressbar"
+                                                                                style="width: 60%" aria-valuenow="60"
+                                                                                aria-valuemin="0" aria-valuemax="100">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="py-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14">Development
+                                                                                </h5>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted mb-0">02/07</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress mt-2">
+                                                                            <div class="progress-bar" role="progressbar"
+                                                                                style="width: 20%" aria-valuenow="20"
+                                                                                aria-valuemin="0" aria-valuemax="100">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="py-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14">Other Tasks
+                                                                                </h5>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted mb-0">02/05</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress mt-2">
+                                                                            <div class="progress-bar" role="progressbar"
+                                                                                style="width: 30%" aria-valuenow="30"
+                                                                                aria-valuemin="0" aria-valuemax="100">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- end card -->
+                                                        </div><!-- end card -->
+                                                    </div><!-- end col -->
+                                                </div><!-- end row -->
+                                            </div><!-- end card body -->
+                                        </div><!-- end card -->
+                                    </div><!-- end tab pane -->
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2" class="nav-item">
+                            <a ngbNavLink>Tasks</a>
+                            <ng-template ngbNavContent>
+                                <div class="">
+                                    <div class="tab-pane" id="tasks" role="tabpanel">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="flex-grow-1">
+                                                        <h5 class="card-title">Tasks</h5>
+                                                    </div>
+                                                    <div class="flex-shrink-0">
+                                                        <div class="dropdown" ngbDropdown>
+                                                            <a class="btn btn-link text-dark dropdown-toggle shadow-none"
+                                                                href="javascript:void(0);" role="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false"
+                                                                ngbDropdownToggle>
+                                                                <i class="uil uil-ellipsis-h"></i>
+                                                            </a>
+
+                                                            <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                                <li><a class="dropdown-item"
+                                                                        href="javascript:void(0);">Action</a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="javascript:void(0);">Another action</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="javascript:void(0);">Something else
+                                                                        here</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <ngx-simplebar style="max-height: 325px;">
+                                                    <div class="table-responsive">
+                                                        <table class="table align-middle table-nowrap mb-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" style="width: 40px;"></th>
+                                                                    <th scope="col" style="width: 140px;">Task ID</th>
+                                                                    <th scope="col">Task</th>
+                                                                    <th scope="col">Assignee</th>
+                                                                    <th scope="col">Status</th>
+                                                                    <th scope="col" style="width: 140px;">Action</th>
+                                                                </tr><!-- end tr -->
+                                                            </thead><!-- end thead -->
+                                                            <tbody>
+                                                                <tr *ngFor="let data of taskList">
+                                                                    <td>
+                                                                        <div class="form-check font-size-16">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" value=""
+                                                                                id="taskcheck01">
+                                                                            <label class="form-check-label"
+                                                                                for="taskcheck01"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td><a href="javascript:void(0);">{{data.id}}</a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h5 class="font-size-14"><a
+                                                                                href="javascript:void(0);"
+                                                                                class="text-dark">{{data.title}}</a>
+                                                                        </h5>
+                                                                        <p class="text-muted mb-0">{{data.date}}</p>
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <div class="avatar-group">
+                                                                            <div class="avatar-group-item"
+                                                                                *ngFor="let user of data.users">
+                                                                                <a href="javascript: void(0);"
+                                                                                    class="d-block"
+                                                                                    *ngIf="!user.profile"
+                                                                                    ngbTooltip="{{user.name}}"
+                                                                                    placement="top">
+                                                                                    <div class="avatar-sm">
+                                                                                        <div
+                                                                                            class="avatar-title rounded-circle {{user.variant}}">
+                                                                                            {{user.name?.charAt(0)}}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
+                                                                                <a href="javascript: void(0);"
+                                                                                    class="d-block"
+                                                                                    ngbTooltip="{{user.name}}"
+                                                                                    placement="top"
+                                                                                    *ngIf="user.profile">
+                                                                                    <div class="avatar-sm">
+                                                                                        <img :src="{{user.profile}}"
+                                                                                            alt=""
+                                                                                            class="img-fluid rounded-circle">
+                                                                                    </div>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span
+                                                                            class="badge {{data.bg_color}} font-size-12">{{data.status}}</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="dropdown" ngbDropdown>
+                                                                            <a class="font-size-16 px-2 text-muted dropdown-toggle"
+                                                                                href="javascript:void(0);"
+                                                                                data-bs-toggle="dropdown"
+                                                                                aria-haspopup="true"
+                                                                                aria-expanded="false" ngbDropdownToggle>
+                                                                                <i class="uil uil-ellipsis-h"></i>
+                                                                            </a>
+
+                                                                            <div class="dropdown-menu dropdown-menu-end"
+                                                                                ngbDropdownMenu>
+                                                                                <a class="dropdown-item"
+                                                                                    href="javascript:void(0);">Action</a>
+                                                                                <a class="dropdown-item"
+                                                                                    href="javascript:void(0);">Another
+                                                                                    action</a>
+                                                                                <a class="dropdown-item"
+                                                                                    href="javascript:void(0);">Something
+                                                                                    else here</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr><!-- end tr -->
+                                                            </tbody><!-- end tbody -->
+                                                        </table><!-- end table -->
+                                                    </div>
+                                                </ngx-simplebar>
+                                            </div><!-- end card body -->
+                                        </div><!-- end card -->
+                                    </div><!-- end tab pane -->
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3" class="nav-item">
+                            <a ngbNavLink>Team</a>
+                            <ng-template ngbNavContent>
+                                <div class="">
+                                    <div class="tab-pane" id="team" role="tabpanel">
+                                        <div>
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="mb-3">
+                                                                <h5 class="card-title">Member List <span
+                                                                        class="text-muted fw-normal ms-2">(12)</span>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div
+                                                                class="d-flex flex-wrap align-items-start justify-content-end gap-2 mb-3">
+                                                                <div>
+                                                                    <ul class="nav nav-pills">
+                                                                        <li class="nav-item" data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="List">
+                                                                            <a class="nav-link"
+                                                                                routerLink="/projects/project-list"><i
+                                                                                    class="uil uil-list-ul"></i></a>
+                                                                        </li>
+                                                                        <li class="nav-item" data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top" title="Grid">
+                                                                            <a class="nav-link active"
+                                                                                routerLink="/projects/project-grid"><i
+                                                                                    class="uil uil-apps"></i></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-light"><i
+                                                                            class="uil uil-plus me-1"></i> Add New</a>
+                                                                </div>
+
+                                                                <div class="dropdown" ngbDropdown>
+                                                                    <a class="btn btn-link text-dark dropdown-toggle"
+                                                                        href="javascript:void(0);" role="button"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false"
+                                                                        ngbDropdownToggle>
+                                                                        <i class="uil uil-ellipsis-h"></i>
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu dropdown-menu-end"
+                                                                        ngbDropdownMenu>
+                                                                        <li><a class="dropdown-item"
+                                                                                href="javascript:void(0);">Action</a>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item"
+                                                                                href="javascript:void(0);">Another
+                                                                                action</a></li>
+                                                                        <li><a class="dropdown-item"
+                                                                                href="javascript:void(0);">Something
+                                                                                else here</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end row -->
+                                                    <div class="row">
+                                                        <div class="col-xl-4 col-sm-6" *ngFor="let data of teamData">
+                                                            <div class="card border shadow-none">
+                                                                <div class="card-body p-4">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div
+                                                                            class="flex-shrink-0 avatar rounded-circle me-3">
+                                                                            <img src="{{data.image}}" alt=""
+                                                                                class="img-fluid rounded-circle">
+                                                                        </div>
+                                                                        <div class="flex-grow-1 overflow-hidden">
+                                                                            <h5 class="font-size-15 mb-1 text-truncate">
+                                                                                <a href="javascript:void(0);"
+                                                                                    class="text-dark">{{data.name}}</a>
+                                                                            </h5>
+                                                                            <p class="text-muted text-truncate mb-0">
+                                                                                {{data.designation}}
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="flex-shrink-0 dropdown" ngbDropdown>
+                                                                            <a class="text-body dropdown-toggle font-size-16"
+                                                                                href="javascript:void(0);" role="button"
+                                                                                data-bs-toggle="dropdown"
+                                                                                aria-haspopup="true" ngbDropdownToggle>
+                                                                                <i-feather class="icon-xs"
+                                                                                    name="more-horizontal"></i-feather>
+                                                                            </a>
+                                                                            <div class="dropdown-menu dropdown-menu-end"
+                                                                                ngbDropdownMenu>
+                                                                                <a class="dropdown-item"
+                                                                                    href="javascript:void(0);">Edit</a>
+                                                                                <a class="dropdown-item"
+                                                                                    href="javascript:void(0);">Action</a>
+                                                                                <a class="dropdown-item"
+                                                                                    href="javascript:void(0);">Remove</a>
+                                                                            </div>
+                                                                        </div><!-- end dropdown -->
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end card body -->
+                                                                <div class="btn-group btn-icon" role="group">
+                                                                    <button type="button" class="btn btn-outline-light"
+                                                                        data-bs-toggle="tooltip" ngbTooltip="Profile"
+                                                                        placement="top"><i
+                                                                            class="uil uil-user"></i></button>
+                                                                    <button type="button" class="btn btn-outline-light"
+                                                                        data-bs-toggle="tooltip" ngbTooltip="Message"
+                                                                        placement="top"><i
+                                                                            class="uil uil-envelope-alt"></i></button>
+                                                                    <button type="button" class="btn btn-outline-light"
+                                                                        data-bs-toggle="tooltip" ngbTooltip="Projects"
+                                                                        placement="top"><i
+                                                                            class="uil uil-chart-pie"></i></button>
+                                                                </div>
+                                                            </div><!-- end card -->
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                    <div class="row g-0">
+                                                        <div class="col-sm-6">
+                                                            <div>
+                                                                <p class="mb-sm-0">Showing 1 to 2 of 12 entries</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="float-sm-end">
+                                                                <ul class="pagination pagination-rounded mb-sm-0">
+                                                                    <li class="page-item">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link"><i
+                                                                                class="mdi mdi-chevron-left"></i></a>
+                                                                    </li>
+                                                                    <li class="page-item active">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link">1</a>
+                                                                    </li>
+                                                                    <li class="page-item">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link">2</a>
+                                                                    </li>
+                                                                    <li class="page-item">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link">3</a>
+                                                                    </li>
+                                                                    <li class="page-item">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link">4</a>
+                                                                    </li>
+                                                                    <li class="page-item">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link">5</a>
+                                                                    </li>
+                                                                    <li class="page-item">
+                                                                        <a href="javascript:void(0);"
+                                                                            class="page-link"><i
+                                                                                class="mdi mdi-chevron-right"></i></a>
+                                                                    </li>
+                                                                </ul><!-- end ul -->
+                                                            </div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="4" class="nav-item">
+                            <a ngbNavLink>Activities</a>
+                            <ng-template ngbNavContent>
+                                <div class="">
+                                    <div class="tab-pane" id="activities" role="tabpanel">
+                                        <div class="card">
+                                            <div class="card-header bg-transparent border-bottom d-flex">
+
+                                                <h5 class="card-title mb-0">Activities</h5>
+
+                                                <div class="ms-auto">
+                                                    <ul ngbNav #nav="ngbNav" [activeId]="1"
+                                                        class="nav nav-tabs card-header-tabs float-end border-bottom-0">
+                                                        <li [ngbNavItem]="1" class="nav-item">
+                                                            <a ngbNavLink>Messages</a>
+                                                            <ng-template ngbNavContent>
+                                                                <div class="">
+                                                                    <div class="tab-pane show active"
+                                                                        id="card-header-messages-tabs">
+                                                                        <div>
+                                                                            <ngx-simplebar style="max-height: 280px;">
+                                                                                <div
+                                                                                    class="list-group list-group-flush">
+                                                                                    <div class="list-group-item py-3"
+                                                                                        *ngFor="let data of messageData">
+                                                                                        <div
+                                                                                            class="d-flex aligm-items-start">
+                                                                                            <div class="flex-shrink-0 me-3"
+                                                                                                *ngIf="data.profile">
+                                                                                                <img src="{{data.profile}}"
+                                                                                                    alt=""
+                                                                                                    class="avatar-sm rounded-circle">
+                                                                                            </div>
+                                                                                            <div class="avatar-sm align-self-center me-3"
+                                                                                                *ngIf="!data.profile">
+                                                                                                <span
+                                                                                                    class="avatar-title rounded-circle bg-soft-primary text-primary">
+                                                                                                    {{
+                                                                                                    data.name.charAt(0)
+                                                                                                    }}
+                                                                                                </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="flex-grow-1 overflow-hidden">
+                                                                                                <h5
+                                                                                                    class="font-size-13 mb-1 text-truncate">
+                                                                                                    <a href="javascript: void(0);"
+                                                                                                        class="text-dark">{{data.name}}</a>
+                                                                                                    <small
+                                                                                                        class="text-muted ms-1">{{data.date}}</small>
+                                                                                                </h5>
+                                                                                                <div class="row"
+                                                                                                    *ngIf="data.image">
+                                                                                                    <div
+                                                                                                        class="col-lg-4 col-sm-6">
+                                                                                                        <div
+                                                                                                            class="card border p-2 shadow-none mt-2 mb-2">
+                                                                                                            <div class="d-flex align-items-center"
+                                                                                                                *ngFor="let image of data.image">
+                                                                                                                <div
+                                                                                                                    class="flex-shrink-0 avatar-sm me-3">
+                                                                                                                    <span
+                                                                                                                        class="avatar-title bg-light text-primary rounded font-size-20">
+                                                                                                                        <i
+                                                                                                                            class="uil {{image.icon}}"></i>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="flex-grow-1 overflow-hidden">
+                                                                                                                    <h5
+                                                                                                                        class="font-size-12 mb-1 text-truncate">
+                                                                                                                        <a href="javascript:void(0);"
+                                                                                                                            class="text-dark">{{image.name}}</a>
+                                                                                                                    </h5>
+                                                                                                                    <p
+                                                                                                                        class="text-muted mb-0 font-size-12">
+                                                                                                                        {{image.size}}
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="flex-shrink-0 ms-2">
+                                                                                                                    <a href="javascript:void(0);"
+                                                                                                                        class="px-2 font-size-18 text-muted">
+                                                                                                                        <i
+                                                                                                                            class="uil uil-download-alt"></i>
+                                                                                                                    </a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <!-- end card -->
+                                                                                                    </div>
+                                                                                                    <!-- end col -->
+                                                                                                </div>
+                                                                                                <p
+                                                                                                    class="text-muted mb-0">
+                                                                                                    {{data.content}}</p>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="flex-shrink-0 ms-2">
+                                                                                                <ul
+                                                                                                    class="list-inline mb-0">
+                                                                                                    <li
+                                                                                                        class="list-inline-item">
+                                                                                                        <a href="javascript: void(0);"
+                                                                                                            class="text-muted font-size-15 px-1">
+                                                                                                            <i
+                                                                                                                class="uil uil-smile"></i>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li
+                                                                                                        class="list-inline-item">
+                                                                                                        <div class="dropdown"
+                                                                                                            ngbDropdown>
+                                                                                                            <a class="dropdown-toggle text-muted font-size-15 px-2"
+                                                                                                                href="javascript:void(0);"
+                                                                                                                role="button"
+                                                                                                                data-bs-toggle="dropdown"
+                                                                                                                aria-haspopup="true"
+                                                                                                                ngbDropdownToggle>
+                                                                                                                <i
+                                                                                                                    class="uil uil-ellipsis-h"></i>
+                                                                                                            </a>
+
+                                                                                                            <div class="dropdown-menu dropdown-menu-end"
+                                                                                                                ngbDropdownMenu>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);"><i
+                                                                                                                        class="uil uil-copy align-bottom text-muted me-2"></i>
+                                                                                                                    Copy</a>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);"><i
+                                                                                                                        class="uil uil-comment-alt-notes align-bottom text-muted me-2"></i>
+                                                                                                                    Reply</a>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);"><i
+                                                                                                                        class="uil uil-share align-bottom text-muted me-2"></i>
+                                                                                                                    Forward</a>
+                                                                                                                <div
+                                                                                                                    class="dropdown-divider">
+                                                                                                                </div>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);"><i
+                                                                                                                        class="uil uil-trash-alt align-bottom text-muted me-2"></i>
+                                                                                                                    Remove</a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </li>
+                                                                                                </ul><!-- end ul -->
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div><!-- end list group -->
+                                                                                </div>
+                                                                            </ngx-simplebar>
+                                                                            <div
+                                                                                class="d-flex chat-input-section align-items-start pt-3">
+                                                                                <div
+                                                                                    class="flex-shrink-0 d-none d-sm-block me-3">
+                                                                                    <img src="assets/images/users/avatar-4.jpg"
+                                                                                        alt=""
+                                                                                        class="avatar-sm rounded-circle">
+                                                                                </div>
+                                                                                <div class="flex-grow-1">
+                                                                                    <div
+                                                                                        class="position-relative d-flex align-items-start">
+                                                                                        <input type="text"
+                                                                                            class="form-control chat-input"
+                                                                                            placeholder="Some text value...">
+                                                                                        <div
+                                                                                            class="chat-input-links d-flex align-items-start">
+                                                                                            <button type="button"
+                                                                                                class="btn btn-link text-muted"
+                                                                                                ngbTooltip="Emoji"
+                                                                                                placement="top"><i
+                                                                                                    class="uil uil-smile"></i></button>
+                                                                                            <button type="button"
+                                                                                                class="btn btn-link text-muted"
+                                                                                                ngbTooltip="Attachments"
+                                                                                                placement="top"><i
+                                                                                                    class="uil uil-paperclip"></i></button>
+                                                                                            <button type="button"
+                                                                                                class="btn btn-primary"><i
+                                                                                                    class="uil uil-message"></i></button>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end tab pane -->
+                                                                </div>
+                                                            </ng-template>
+                                                        </li>
+                                                        <li [ngbNavItem]="2" class="nav-item">
+                                                            <a ngbNavLink>Attachments</a>
+                                                            <ng-template ngbNavContent>
+                                                                <div class="">
+                                                                    <div class="tab-pane"
+                                                                        id="card-header-attachment-tabs">
+                                                                        <div>
+                                                                            <ngx-simplebar style="max-height: 280px;">
+                                                                                <div
+                                                                                    class="list-group list-group-flush">
+                                                                                    <div class="list-group-item py-3"
+                                                                                        *ngFor="let data of attachmentsData">
+                                                                                        <div
+                                                                                            class="d-flex align-items-start">
+                                                                                            <div
+                                                                                                class="flex-shrink-0 avatar-sm me-3">
+                                                                                                <span
+                                                                                                    class="avatar-title bg-light text-primary rounded font-size-20">
+                                                                                                    <i
+                                                                                                        class="uil {{data.icon}}"></i>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="flex-grow-1 overflow-hidden">
+                                                                                                <h5
+                                                                                                    class="font-size-13 mb-1 text-truncate">
+                                                                                                    <a href="javascript:void(0);"
+                                                                                                        class="text-dark">{{data.name}}</a>
+                                                                                                </h5>
+                                                                                                <p
+                                                                                                    class="text-muted mb-0 font-size-12">
+                                                                                                    {{data.size}}</p>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="flex-shrink-0 ms-2">
+                                                                                                <ul
+                                                                                                    class="list-inline mb-0">
+                                                                                                    <li
+                                                                                                        class="list-inline-item">
+                                                                                                        <a href="javascript: void(0);"
+                                                                                                            class="text-muted font-size-18 px-2">
+                                                                                                            <i
+                                                                                                                class="uil uil-download-alt"></i>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li
+                                                                                                        class="list-inline-item">
+                                                                                                        <div class="dropdown"
+                                                                                                            ngbDropdown>
+                                                                                                            <a class="dropdown-toggle text-muted font-size-18 px-2"
+                                                                                                                href="javascript:void(0);"
+                                                                                                                role="button"
+                                                                                                                data-bs-toggle="dropdown"
+                                                                                                                aria-haspopup="true"
+                                                                                                                ngbDropdownToggle>
+                                                                                                                <i
+                                                                                                                    class="uil uil-ellipsis-h"></i>
+                                                                                                            </a>
+
+                                                                                                            <div class="dropdown-menu dropdown-menu-end"
+                                                                                                                ngbDropdownMenu>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);">Action</a>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);">Another
+                                                                                                                    action</a>
+                                                                                                                <div
+                                                                                                                    class="dropdown-divider">
+                                                                                                                </div>
+                                                                                                                <a class="dropdown-item"
+                                                                                                                    href="javascript:void(0);">Separated
+                                                                                                                    link</a>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div><!-- end list group -->
+                                                                                </div>
+                                                                            </ngx-simplebar>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end tab pane -->
+                                                                </div>
+                                                            </ng-template>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <div class="tab-content">
+                                                    <div [ngbNavOutlet]="nav" class="mt-2 w-100"></div>
+                                                </div>
+                                                <!-- end tab content -->
+
+                                            </div>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- end card body -->
+        </div><!-- en card -->
+
+        <div class="tab-content">
+            <div [ngbNavOutlet]="nav" class="mt-2 w-100"></div>
+        </div>
+        <!-- end tab content -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

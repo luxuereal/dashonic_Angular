@@ -1,0 +1,117 @@
+<!-- start page title -->
+<app-pagetitle title="Radialbar Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic Radialbar Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radialbar-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="basic_radialbar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="basicRadialbarChart.series" [chart]="basicRadialbarChart.chart"
+                        [plotOptions]="basicRadialbarChart.plotOptions" [labels]="basicRadialbarChart.labels"
+                        [colors]="basicRadialbarChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Multiple Radialbar</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radialbar-charts/multiple/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="multiple_radialbar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="multipleRadialbarChart.series" [chart]="multipleRadialbarChart.chart"
+                        [plotOptions]="multipleRadialbarChart.plotOptions" [labels]="multipleRadialbarChart.labels"
+                        [colors]="multipleRadialbarChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Circle Chart - Custom Angle</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radialbar-charts/custom-angle-circle/"
+                    target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="circle_radialbar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="customAngleChart.series" [chart]="customAngleChart.chart"
+                        [plotOptions]="customAngleChart.plotOptions" [labels]="customAngleChart.labels"
+                        [legend]="customAngleChart.legend" [colors]="customAngleChart.colors"
+                        [responsive]="customAngleChart.responsive"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Gradient Circle Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radialbar-charts/gradient/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="gradient_radialbar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="gradientCircleChart.series" [chart]="gradientCircleChart.chart"
+                        [plotOptions]="gradientCircleChart.plotOptions" [labels]="gradientCircleChart.labels"
+                        [stroke]="gradientCircleChart.stroke" [fill]="gradientCircleChart.fill"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row mb-4">
+    <div class="col-lg-6">
+        <div class="card h-100 mb-xl-0">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Stroked Circular Gauge</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radialbar-charts/stroked-angular-gauge/"
+                    target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="stroked_radialbar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="strokedCircleChart.series" [chart]="strokedCircleChart.chart"
+                        [plotOptions]="strokedCircleChart.plotOptions" [labels]="strokedCircleChart.labels"
+                        [fill]="strokedCircleChart.fill" [stroke]="strokedCircleChart.stroke"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card h-100 mb-xl-0">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Semi Circular Gauge</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/radialbar-charts/semi-circle-gauge/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="semi_radialbar" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="semiCircleChart.series" [chart]="semiCircleChart.chart"
+                        [plotOptions]="semiCircleChart.plotOptions" [labels]="semiCircleChart.labels"
+                        [fill]="semiCircleChart.fill"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->

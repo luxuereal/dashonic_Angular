@@ -1,0 +1,147 @@
+<!-- start page title -->
+<app-pagetitle title="Projects Grid" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="mb-3">
+                            <a href="javascript:void(0);" class="btn btn-light">
+                                <i class="uil uil-plus me-1"></i> Add New
+                            </a>
+                        </div>
+                    </div><!-- end col -->
+                    <div class="col-md-9">
+                        <div class="d-flex flex-wrap align-items-start justify-content-md-end gap-2 mb-3">
+                            <div class="search-box ">
+                                <div class="position-relative">
+                                    <input type="text" class="form-control bg-light border-light rounded"
+                                        placeholder="Search...">
+                                    <i class="uil uil-search search-icon"></i>
+                                </div>
+                            </div><!-- end serch box -->
+
+                            <div>
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link" routerLink="/projects/project-list" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="List"><i class="uil uil-list-ul"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" routerLink="/projects/project-grid"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Grid"><i
+                                                class="uil uil-apps"></i></a>
+                                    </li>
+                                </ul><!-- end ul -->
+                            </div>
+                            <div class="dropdown" ngbDropdown placement="bottom-right">
+                                <a class="btn btn-link text-dark dropdown-toggle shadow-none" href="javascript:void(0);"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                                    <i class="uil uil-ellipsis-h"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </div><!-- end dropdown -->
+                        </div>
+
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="mt-2">
+                    <ul class="nav nav-tabs nav-tabs-custom mb-4" role="tablist">
+                        <li class="nav-item" (click)="activeCategory('all')"><a href="javascript:void(0);"
+                                class="nav-link" [ngClass]="{'active': galleryFilter === 'all'}" data-bs-toggle="tab"
+                                role="tab">All</a></li>
+                        <li class="nav-item" (click)="activeCategory('active')"><a href="javascript:void(0);"
+                                class="nav-link" [ngClass]="{'active': galleryFilter === 'active'}"
+                                data-bs-toggle="tab">Active</a>
+                        </li>
+                        <li class="nav-item" (click)="activeCategory('completed')"><a href="javascript:void(0);"
+                                class="nav-link" [ngClass]="{'active': galleryFilter === 'completed'}"
+                                data-bs-toggle="tab">Completed</a>
+                        </li>
+                    </ul><!-- end ul -->
+                </div>
+
+                <!-- Tab content -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="grid-all" role="tabpanel">
+                        <div class="row">
+                            <div class="col-xl-3 col-sm-6" *ngFor="let data of projectGrid">
+                                <div class="card border shadow-none border">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="flex-grow-1">
+                                                <div class="badge badge-soft-primary font-size-12" [ngClass]="{'badge-soft-primary': data.type == 'Design', 'badge-soft-info': data.type == 'Development'}">{{data.type}}</div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <div class="dropdown" ngbDropdown placement="bottom-right">
+                                                    <a class="text-body dropdown-toggle font-size-16"
+                                                        href="javascript:void(0);" role="button"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        ngbDropdownToggle>
+                                                        <i-feather class="icon-xs" name="more-horizontal"></i-feather>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                        <li><a class="dropdown-item"
+                                                                href="javascript:void(0);">Action</a></li>
+                                                        <li><a class="dropdown-item" href="javascript:void(0);">Another
+                                                                action</a></li>
+                                                        <li>
+                                                            <hr class="dropdown-divider">
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                                href="javascript:void(0);">Separated link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-size-15 mb-1 text-truncate"><a
+                                                    routerLink="/projects/project-overview"
+                                                    class="text-dark">{{data.title}}</a></h5>
+                                            <p class="text-muted mb-4 text-truncate">{{data.content}}</p>
+                                        </div>
+
+                                        <div class="border-top pt-3">
+                                            <div class="avatar-group align-items-center">
+                                                <div class="me-4">Team :</div>
+                                                <div class="avatar-group-item" *ngFor="let user of data.users">
+                                                    <a href="javascript: void(0);" class="d-block" *ngIf="!user.profile"
+                                                        ngbTooltip="{{user.name}}" placement="top">
+                                                        <div class="avatar-sm">
+                                                            <div class="avatar-title rounded-circle {{user.variant}}">
+                                                                {{user.name?.charAt(0)}}
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="javascript: void(0);" class="d-block"
+                                                        ngbTooltip="{{user.name}}" placement="top" *ngIf="user.profile">
+                                                        <div class="avatar-sm">
+                                                            <img :src="{{user.profile}}" alt=""
+                                                                class="img-fluid rounded-circle">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+                    </div>
+                    <!-- end tab pane -->
+                </div>
+                <!-- end tab content -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

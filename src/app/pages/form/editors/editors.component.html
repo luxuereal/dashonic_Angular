@@ -1,0 +1,18 @@
+<!-- start page title -->
+<app-pagetitle title="Form Editor" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Ckeditor Classic Editor</h4>
+                <a href="https://www.npmjs.com/package/@ckeditor/ckeditor5-angular" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <ckeditor [editor]="Editor" data=""></ckeditor>
+            </div>
+        </div>
+    </div><!-- end col-->
+</div><!-- end row -->

@@ -1,0 +1,77 @@
+<!-- start page title -->
+<app-pagetitle title="Mixed Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Line & Column Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/mixed-charts/line-column/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="lineChart.series" [chart]="lineChart.chart" [yaxis]="lineChart.yaxis"
+                    [xaxis]="lineChart.xaxis" [labels]="lineChart.labels" [stroke]="lineChart.stroke"
+                    [title]="lineChart.title" [dataLabels]="lineChart.dataLabels" [fill]="lineChart.fill"
+                    [tooltip]="lineChart.tooltip"></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Multiple Y-Axis Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/mixed-charts/multiple-y-axis/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="multipleYAxisChart.series" [chart]="multipleYAxisChart.chart"
+                    [xaxis]="multipleYAxisChart.xaxis" [markers]="multipleYAxisChart.markers"
+                    [stroke]="multipleYAxisChart.stroke" [yaxis]="multipleYAxisChart.yaxis"
+                    [dataLabels]="multipleYAxisChart.dataLabels" [title]="multipleYAxisChart.title"
+                    [fill]="multipleYAxisChart.fill" [tooltip]="multipleYAxisChart.tooltip"
+                    [legend]="multipleYAxisChart.legend" [colors]="multipleYAxisChart.colors"></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Line & Area Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/mixed-charts/line-area/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="lineAreaChart.series" [chart]="lineAreaChart.chart" [yaxis]="lineAreaChart.yaxis"
+                    [xaxis]="lineAreaChart.xaxis" [labels]="lineAreaChart.labels" [stroke]="lineAreaChart.stroke"
+                    [markers]="lineAreaChart.markers" [fill]="lineAreaChart.fill" [tooltip]="lineAreaChart.tooltip">
+                </apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Line, Column & Area Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/mixed-charts/line-column-area/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="lineColumnAreaChart.series" [chart]="lineColumnAreaChart.chart"
+                    [yaxis]="lineColumnAreaChart.yaxis" [xaxis]="lineColumnAreaChart.xaxis"
+                    [labels]="lineColumnAreaChart.labels" [stroke]="lineColumnAreaChart.stroke"
+                    [plotOptions]="lineColumnAreaChart.plotOptions" [markers]="lineColumnAreaChart.markers"
+                    [fill]="lineColumnAreaChart.fill" [tooltip]="lineColumnAreaChart.tooltip"
+                    [colors]="lineColumnAreaChart.colors"></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->

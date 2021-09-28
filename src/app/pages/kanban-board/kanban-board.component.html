@@ -1,0 +1,270 @@
+<!-- start page title -->
+<app-pagetitle title="Kanban Board" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body p-4">
+                <div class="border-bottom pb-4 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="d-flex">
+                                <div class="avatar flex-shrink-0 me-3">
+                                    <div class="avatar-title bg-light rounded-circle">
+                                        <img src="assets/images/logo-sm.png" alt="" height="28">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="font-size-16 mb-1">Dashonic Admin Dashboard</h5>
+                                    <p class="text-muted mb-0">Lorem ipsum dolor sit amet adipiscing elit</p>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-sm-6">
+                            <div class="mt-4 mt-sm-0">
+                                <div class="avatar-group justify-content-sm-end">
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-block" ngbTooltip="Emily Surface"
+                                            placement="top">
+                                            <div class="avatar-sm">
+                                                <div class="avatar-title rounded-circle bg-primary">
+                                                    E
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- end avatar group item -->
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-block" ngbTooltip="James Scott"
+                                            placement="top">
+                                            <div class="avatar-sm">
+                                                <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                    class="img-fluid rounded-circle">
+                                            </div>
+                                        </a>
+                                    </div><!-- end avatar group item -->
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-block" ngbTooltip="Lynn Hackett"
+                                            placement="top">
+                                            <div class="avatar-sm">
+                                                <div class="avatar-title rounded-circle bg-info">
+                                                    L
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- end avatar group item -->
+                                    <div class="avatar-group-item">
+                                        <a href="javascript: void(0);" class="d-block" ngbTooltip="Add New"
+                                            placement="top">
+                                            <div class="avatar-sm">
+                                                <div class="avatar-title rounded-circle bg-light text-primary">
+                                                    <i class="mdi mdi-plus fs-5"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- end avatar group item -->
+                                </div><!-- end avatar-group -->
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div>
+
+                <div class="task-board">
+                    <div class="task-list">
+                        <div class="card bg-light shadow-none h-100">
+                            <div class="card-header bg-transparent border-bottom d-flex align-items-start">
+                                <div class="flex-grow-1">
+                                    <h4 class="card-title mb-0">Todo <span class="ml-1 text-muted">(03)</span>
+                                    </h4>
+                                </div>
+                                <div class="flex-shrink-0 ms-2">
+                                    <div class="dropdown" ngbDropdown placement="bottom-right">
+                                        <a href="javascript:void(0);" class="dropdown-toggle arrow-none font-size-16"
+                                            data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                                            <i class="uil uil-ellipsis-h text-muted"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                        </div>
+                                    </div> <!-- end dropdown -->
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-center p-3">
+                                    <a href="javascript: void(0);" class="btn btn-primary btn-soft w-100"><i
+                                            class="mdi mdi-plus mr-1"></i> Add New</a>
+                                </div>
+                                <ngx-simplebar class="tasklist-content p-3">
+                                    <div id="inprogress-task" class="tasks" [dndDropzone] dndEffectAllowed="move"
+                                        (dndDrop)="onDrop($event, upcomingTasks,'Progress-task')">
+                                        <div class="dndPlaceholder" dndPlaceholderRef></div>
+                                        <ng-container *ngFor="let task of upcomingTasks">
+                                            <div [dndDraggable]="task" dndEffectAllowed="move"
+                                                (dndMoved)="onDragged(task, upcomingTasks)">
+                                                <ng-template [ngTemplateOutlet]="TaskContent"
+                                                    [ngTemplateOutletContext]="{task:task}">
+                                                </ng-template>
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </ngx-simplebar>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-list">
+                        <div class="card bg-light shadow-none h-100">
+                            <div class="card-header bg-transparent border-bottom d-flex align-items-start">
+                                <div class="flex-grow-1">
+                                    <h4 class="card-title mb-0">In Progress <span class="ml-1 text-muted">(01)</span>
+                                    </h4>
+                                </div>
+                                <div class="flex-shrink-0 ms-2">
+                                    <div class="dropdown" ngbDropdown placement="bottom-right">
+                                        <a href="javascript:void(0);" class="dropdown-toggle arrow-none font-size-16"
+                                            data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                                            <i class="uil uil-ellipsis-h text-muted"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                        </div>
+                                    </div> <!-- end dropdown -->
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-center p-3">
+                                    <a href="javascript: void(0);" class="btn btn-primary btn-soft w-100"><i
+                                            class="mdi mdi-plus mr-1"></i> Add New</a>
+                                </div>
+                                <ngx-simplebar class="tasklist-content p-3">
+                                    <div id="inprogress-task" class="tasks" [dndDropzone] dndEffectAllowed="move"
+                                        (dndDrop)="onDrop($event, inprogressTasks,'Progress-task')">
+                                        <div class="dndPlaceholder" dndPlaceholderRef></div>
+                                        <ng-container *ngFor="let task of inprogressTasks">
+                                            <div [dndDraggable]="task" dndEffectAllowed="move"
+                                                (dndMoved)="onDragged(task, inprogressTasks)">
+                                                <ng-template [ngTemplateOutlet]="TaskContent"
+                                                    [ngTemplateOutletContext]="{task:task}">
+                                                </ng-template>
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </ngx-simplebar>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-list">
+                        <div class="card bg-light shadow-none h-100">
+                            <div class="card-header bg-transparent border-bottom d-flex align-items-start">
+                                <div class="flex-grow-1">
+                                    <h4 class="card-title mb-0">Completed <span class="ml-1 text-muted">(02)</span>
+                                    </h4>
+                                </div>
+                                <div class="flex-shrink-0 ms-2">
+                                    <div class="dropdown" ngbDropdown placement="bottom-right">
+                                        <a href="javascript:void(0);" class="dropdown-toggle arrow-none font-size-16"
+                                            data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                                            <i class="uil uil-ellipsis-h text-muted"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                        </div>
+                                    </div> <!-- end dropdown -->
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-center p-3">
+                                    <a href="javascript: void(0);" class="btn btn-primary btn-soft w-100"><i
+                                            class="mdi mdi-plus mr-1"></i> Add New</a>
+                                </div>
+                                <ngx-simplebar class="tasklist-content p-3">
+                                    <div id="completed-task" class="tasks" [dndDropzone] dndEffectAllowed="move"
+                                        (dndDrop)="onDrop($event, completedTasks,'Progress-task')">
+                                        <div class="dndPlaceholder" dndPlaceholderRef></div>
+                                        <ng-container *ngFor="let task of completedTasks">
+                                            <div [dndDraggable]="task" dndEffectAllowed="move"
+                                                (dndMoved)="onDragged(task, completedTasks)">
+                                                <ng-template [ngTemplateOutlet]="TaskContent"
+                                                    [ngTemplateOutletContext]="{task:task}">
+                                                </ng-template>
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </ngx-simplebar>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div>
+
+
+<!-- Task  -->
+<ng-template #TaskContent let-task='task'>
+    <div class="card task-box mb-4">
+        <div class="card-body">
+            <div class="d-flex align-items-start mb-2">
+                <div class="flex-grow-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="task-inprogressCheck1">
+                        <label class="form-check-label text-primary" for="task-inprogressCheck1">{{task.id}}</label>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 ms-2">
+                    <div class="dropdown" ngbDropdown>
+                        <a href="javascript:void(0);" class="dropdown-toggle font-size-16 text-muted"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+                            <i class="mdi mdi-dots-horizontal"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                            <a class="dropdown-item" href="javascript:void(0);">View</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Remove</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5 class="font-size-14 mb-1">{{task.title}}</h5>
+
+            <p class="text-muted text-truncate">{{task.content}}</p>
+
+            <div class="avatar-group">
+                <div class="avatar-group-item" *ngFor="let user of task.users">
+                    <a href="javascript: void(0);" class="d-block" *ngIf="!user.profile" ngbTooltip="{{user.name}}"
+                        placement="top">
+                        <div class="avatar-sm">
+                            <div class="avatar-title rounded-circle {{task.variant}}">
+                                {{user.name?.charAt(0)}}
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript: void(0);" class="d-block" ngbTooltip="{{user.name}}" placement="top"
+                        *ngIf="user.profile">
+                        <div class="avatar-sm">
+                            <img :src="{{user.profile}}" alt="" class="img-fluid rounded-circle">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-transparent border-top d-flex">
+            <div class="flex-grow-1">
+                <div class="font-size-13 text-muted">{{task.date}}</div>
+            </div>
+            <div class="flex-shrink-0 ms-2">
+                <span class="badge font-size-12"
+                    [ngClass]="{'badge-soft-primary': task.status == 'open', 'badge-soft-warning': task.status == 'inprogress', 'badge-soft-success': task.status == 'completed'}">{{task.status
+                    | titlecase}}</span>
+            </div>
+        </div><!-- end card-footer -->
+    </div><!-- end task card -->
+</ng-template>

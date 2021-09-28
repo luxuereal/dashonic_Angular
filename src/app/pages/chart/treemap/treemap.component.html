@@ -1,0 +1,80 @@
+<!-- start page title -->
+<app-pagetitle title="Treemaps Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic Treemap Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/treemap-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="basic_treemap" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="basicTreemapChart.series" [chart]="basicTreemapChart.chart"
+                        [dataLabels]="basicTreemapChart.dataLabels" [plotOptions]="basicTreemapChart.plotOptions"
+                        [title]="basicTreemapChart.title" [legend]="basicTreemapChart.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Multi-Dimensional Treemap Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/treemap-charts/treemap-multiple-series/"
+                    target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="multi_treemap" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="MultiDimensionalChart.series" [chart]="MultiDimensionalChart.chart"
+                        [dataLabels]="MultiDimensionalChart.dataLabels"
+                        [plotOptions]="MultiDimensionalChart.plotOptions" [title]="MultiDimensionalChart.title"
+                        [legend]="MultiDimensionalChart.legend" [colors]="MultiDimensionalChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Distributed Treemap Chart (Different Color for each Cell)</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/treemap-charts/distributed/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="distributed_treemap" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="distributedTreemapChart.series" [chart]="distributedTreemapChart.chart"
+                        [dataLabels]="distributedTreemapChart.dataLabels"
+                        [plotOptions]="distributedTreemapChart.plotOptions" [title]="distributedTreemapChart.title"
+                        [colors]="distributedTreemapChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Treemap Chart with Color Ranges</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/treemap-charts/color-range/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="color_range_treemap" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="colorRangesChart.series" [chart]="colorRangesChart.chart"
+                        [dataLabels]="colorRangesChart.dataLabels" [plotOptions]="colorRangesChart.plotOptions"
+                        [title]="colorRangesChart.title" [legend]="colorRangesChart.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->

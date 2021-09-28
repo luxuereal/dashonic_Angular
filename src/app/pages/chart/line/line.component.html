@@ -1,0 +1,233 @@
+<!-- start page title -->
+<app-pagetitle title="Line Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic Line Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_basic" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="basicLineChart.series" [chart]="basicLineChart.chart"
+                        [markers]="basicLineChart.markers" [dataLabels]="basicLineChart.dataLabels"
+                        [stroke]="basicLineChart.stroke" [colors]="basicLineChart.colors" [title]="basicLineChart.title"
+                        [xaxis]="basicLineChart.xaxis"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Zoomable Timeseries</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/zoomable-timeseries/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_zoomable" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="zoomableTimeseriesChart.series" [chart]="zoomableTimeseriesChart.chart"
+                        [markers]="zoomableTimeseriesChart.markers" [dataLabels]="zoomableTimeseriesChart.dataLabels"
+                        [stroke]="zoomableTimeseriesChart.stroke" [colors]="zoomableTimeseriesChart.colors"
+                        [title]="zoomableTimeseriesChart.title" [xaxis]="zoomableTimeseriesChart.xaxis"
+                        [colors]="zoomableTimeseriesChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Line with Data Labels</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/line-with-data-labels/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_datalabel" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="lineWithDataLabelsChart.series" [chart]="lineWithDataLabelsChart.chart"
+                        [xaxis]="lineWithDataLabelsChart.xaxis" [stroke]="lineWithDataLabelsChart.stroke"
+                        [colors]="lineWithDataLabelsChart.colors" [dataLabels]="lineWithDataLabelsChart.dataLabels"
+                        [legend]="lineWithDataLabelsChart.legend" [markers]="lineWithDataLabelsChart.markers"
+                        [grid]="lineWithDataLabelsChart.grid" [yaxis]="lineWithDataLabelsChart.yaxis"
+                        [title]="lineWithDataLabelsChart.title"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Dashed Line</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/dashed/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_dashed" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="dashedLineChart.series" [chart]="dashedLineChart.chart"
+                        [colors]="dashedLineChart.colors" [dataLabels]="dashedLineChart.dataLabels"
+                        [stroke]="dashedLineChart.stroke" [series]="dashedLineChart.series"
+                        [title]="dashedLineChart.title" [markers]="dashedLineChart.markers"
+                        [xaxis]="dashedLineChart.xaxis" [tooltip]="dashedLineChart.tooltip"
+                        [grid]="dashedLineChart.grid"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Line with Annotations</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/line-chart-with-annotations/"
+                    target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_annotations" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="lineAnnotationsChart.series" [chart]="lineAnnotationsChart.chart"
+                        [xaxis]="lineAnnotationsChart.xaxis" [dataLabels]="lineAnnotationsChart.dataLabels"
+                        [grid]="lineAnnotationsChart.grid" [stroke]="lineAnnotationsChart.stroke"
+                        [title]="lineAnnotationsChart.title" [labels]="lineAnnotationsChart.labels"
+                        [annotations]="lineAnnotationsChart.annotations"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Syncing Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/syncing-charts/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="apex-charts" dir="ltr">
+                    <div id="syncingchart-line">
+                        <apx-chart [series]="SyncingLineChart.series" [chart]="SyncingLineChart.chart"
+                            [colors]="SyncingLineChart.colors" [yaxis]="SyncingLineChart.yaxis"></apx-chart>
+                    </div>
+                    <div id="syncingchart-area">
+                        <apx-chart [series]="SyncingAreaChart.series" [chart]="SyncingAreaChart.chart"
+                            [dataLabels]="SyncingAreaChart.dataLabels" [colors]="SyncingAreaChart.colors"
+                            [yaxis]="SyncingAreaChart.yaxis"></apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Brush Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/brush-chart/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div>
+                    <div id="brushchart_line2" class="apex-charts" dir="ltr">
+                        <apx-chart [series]="brushLineChart.series" [chart]="brushLineChart.chart"
+                            [xaxis]="brushLineChart.xaxis" [dataLabels]="brushLineChart.dataLabels"
+                            [colors]="brushLineChart.colors" [fill]="brushLineChart.fill"
+                            [markers]="brushLineChart.markers" [stroke]="brushLineChart.stroke"></apx-chart>
+                    </div>
+                    <div id="brushchart_line" class="apex-charts" dir="ltr">
+                        <apx-chart [series]="brushAreaChart.series" [chart]="brushAreaChart.chart"
+                            [xaxis]="brushAreaChart.xaxis" [colors]="brushAreaChart.colors" [fill]="brushAreaChart.fill"
+                            [yaxis]="brushAreaChart.yaxis"></apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Stepline Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/stepline/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_stepline" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="stepLineChart.series" [chart]="stepLineChart.chart"
+                        [markers]="stepLineChart.markers" [stroke]="stepLineChart.stroke"
+                        [dataLabels]="stepLineChart.dataLabels" [title]="stepLineChart.title"
+                        [colors]="stepLineChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Gradient Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/gradient/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_gradient" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="gradientChart.series" [chart]="gradientChart.chart"
+                        [xaxis]="gradientChart.xaxis" [dataLabels]="gradientChart.dataLabels"
+                        [grid]="gradientChart.grid" [stroke]="gradientChart.stroke" [title]="gradientChart.title"
+                        [markers]="gradientChart.markers" [yaxis]="gradientChart.yaxis" [fill]="gradientChart.fill">
+                    </apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Missing Data/ Null Value Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/line-charts/missing-null-values/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="line_chart_missing_data" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="missingDataChart.series" [chart]="missingDataChart.chart"
+                        [xaxis]="missingDataChart.xaxis" [stroke]="missingDataChart.stroke"
+                        [labels]="missingDataChart.labels" [title]="missingDataChart.title"
+                        [colors]="missingDataChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+</div><!-- end row -->

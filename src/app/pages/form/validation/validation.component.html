@@ -1,0 +1,173 @@
+<!-- start page title -->
+<app-pagetitle title="Form Validation" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Bootstrap Validation - Custom Style</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <form class="needs-validation" novalidate (ngSubmit)="validSubmit()" [formGroup]="validationform">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label" for="validationCustom01">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01"
+                                    formControlName="firstName" placeholder="First name"
+                                    [ngClass]="{'is-valid': submit && form.firstName.errors}">
+                                <div *ngIf="submit && form.firstName.errors" class="valid-feedback">
+                                    <span *ngIf="form.firstName.errors.required">Looks good!</span>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label" for="validationCustom02">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02"
+                                    formControlName="lastName" placeholder="Last name"
+                                    [ngClass]="{'is-valid': submit && form.lastName.errors}" value="Otto" required>
+                                <div *ngIf="submit && form.lastName.errors" class="valid-feedback">
+                                    <span *ngIf="form.lastName.errors.required">Looks good!</span>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label class="form-label" for="validationCustom03">City</label>
+                                <input type="text" class="form-control" id="validationCustom03" formControlName="city"
+                                    placeholder="City" [ngClass]="{'is-invalid': submit && form.city.errors}">
+                                <div *ngIf="submit && form.city.errors" class="invalid-feedback">
+                                    <span *ngIf="form.city.errors.required">Please provide a valid city.</span>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label class="form-label" for="validationCustom04">State</label>
+                                <input type="text" class="form-control" id="validationCustom04" formControlName="state"
+                                    placeholder="State" [ngClass]="{'is-invalid': submit && form.state.errors}">
+                                <div *ngIf="submit && form.state.errors" class="invalid-feedback">
+                                    <span *ngIf="form.state.errors.required">Please provide a valid state.</span>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label class="form-label" for="validationCustom05">Zip</label>
+                                <input type="text" class="form-control" id="validationCustom05" formControlName="zip"
+                                    placeholder="Zip" [ngClass]="{'is-invalid': submit && form.zip.errors}">
+                                <div *ngIf="submit && form.zip.errors" class="invalid-feedback">
+                                    <span *ngIf="form.zip.errors.required">Please provide a valid zip.</span>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="invalidCheck" required
+                                        [ngClass]="{'is-invalid': submit && form.agree.errors}">
+                                    <label class="form-check-label" for="invalidCheck">Agree to terms and
+                                        conditions</label>
+                                    <div *ngIf="submit && form.agree.errors" class="invalid-feedback">
+                                        <span *ngIf="form.agree.errors.required">You must agree before
+                                            submitting.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </form><!-- end form -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div> <!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card card-h-100">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Bootstrap Validation - Tooltips</h4>
+               
+            </div><!-- end card header -->
+            <div class="card-body">
+                <form class="needs-validation" novalidate (ngSubmit)="formSubmit()" [formGroup]="tooltipvalidationform">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3 position-relative">
+                                <label for="validationTooltip01">First name</label>
+                                <input type="text" class="form-control" formControlName="firstName"
+                                    id="validationTooltip01" placeholder="First name" value="Mark"
+                                    [ngClass]="{'is-valid': formsubmit && formData.firstName.errors}">
+                                <div *ngIf="formsubmit && formData.firstName.errors" class="valid-tooltip">
+                                    <span *ngIf="formData.firstName.errors.required">Looks good!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3 position-relative">
+                                <label for="validationTooltip02">Last name</label>
+                                <input type="text" class="form-control" id="validationTooltip02"
+                                    formControlName="lastName" placeholder="Last name" value="Otto"
+                                    [ngClass]="{'is-valid': formsubmit && formData.lastName.errors}">
+                                <div *ngIf="formsubmit && formData.lastName.errors" class="valid-tooltip">
+                                    <span *ngIf="formData.lastName.errors.required">Looks good!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3 position-relative">
+                                <label for="validationTooltipUsername">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="validationTooltipUsername"
+                                        formControlName="userName" placeholder="Username"
+                                        aria-describedby="validationTooltipUsernamePrepend"
+                                        [ngClass]="{'is-invalid': formsubmit && formData.userName.errors}">
+
+                                    <div *ngIf="formsubmit && formData.userName.errors" class="invalid-tooltip">
+                                        <span *ngIf="formData.userName.errors.required">Please choose a unique and valid
+                                            username.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3 position-relative">
+                                <label for="validationTooltip03">City</label>
+                                <input type="text" class="form-control" id="validationTooltip03" placeholder="City"
+                                    formControlName="city"
+                                    [ngClass]="{'is-invalid': formsubmit && formData.city.errors}">
+                                <div *ngIf="formsubmit && formData.city.errors" class="invalid-tooltip">
+                                    <span *ngIf="formData.city.errors.required">Please provide a valid city.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3 position-relative">
+                                <label for="validationTooltip04">State</label>
+                                <input type="text" class="form-control" id="validationTooltip04" placeholder="State"
+                                    formControlName="state"
+                                    [ngClass]="{'is-invalid': formsubmit && formData.state.errors}">
+                                <div *ngIf="formsubmit && formData.state.errors" class="invalid-tooltip">
+                                    <span *ngIf="formData.state.errors.required">Please provide a valid state.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </form>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div> <!-- end col -->
+</div><!-- end row -->

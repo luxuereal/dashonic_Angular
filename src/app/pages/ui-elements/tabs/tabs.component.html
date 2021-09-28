@@ -1,0 +1,746 @@
+<!-- start page title -->
+<app-pagetitle title="Tabs & Accordions" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xxl-4 col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Default Tabs</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav-tabs">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div [ngbNavOutlet]="nav"></div>
+                </div>
+            </div> <!-- end card body -->
+        </div> <!-- end card -->
+    </div> <!-- end col -->
+
+    <div class="col-xxl-4 col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Nav Pills</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul ngbNav #pillsnav="ngbNav" [activeId]="1" class="nav nav-pills">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div [ngbNavOutlet]="pillsnav"></div>
+                </div>
+            </div> <!-- end crad body -->
+        </div> <!-- end crad -->
+    </div> <!-- end col -->
+
+    <div class="col-xxl-4 col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Nav Pills Justify</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul ngbNav #pillsJustifyNav="ngbNav" [activeId]="1" class="nav nav-pills nav-justified bg-light">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Settings</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent3"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div [ngbNavOutlet]="pillsJustifyNav"></div>
+                </div>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xxl-4 col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Custom Tabs</h4>
+                <p class="m-0 badge badge-soft-primary py-2">Dashonic Only</p>
+            </div><!-- end card header -->
+            <div class="card-body">
+
+                <!-- Nav tabs -->
+                <ul ngbNav #customNav="ngbNav" [activeId]="1" class="nav nav-tabs nav-tabs-custom">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Settings</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent3"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div [ngbNavOutlet]="customNav"></div>
+                </div>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xxl-4 col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Custom Justify Tabs</h4>
+                <p class="m-0 badge badge-soft-primary py-2">Dashonic Only</p>
+            </div><!-- end card header -->
+            <div class="card-body">
+
+                <!-- Nav tabs -->
+                <ul ngbNav #justifyNav="ngbNav" [activeId]="1" class="nav nav-tabs nav-tabs-custom nav-justified">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Settings</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent3"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div [ngbNavOutlet]="justifyNav"></div>
+                </div><!-- end tab content -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xxl-4 col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Nav Tabs Justify</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul ngbNav #Nav="ngbNav" [activeId]="1" class="nav nav-tabs nav-justified">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                            <span class="d-none d-sm-block">Home</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                            <span class="d-none d-sm-block">Profile</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Messages</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>
+                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                            <span class="d-none d-sm-block">Settings</span>
+                        </a>
+                        <ng-template ngbNavContent>
+                            <ng-template [ngTemplateOutlet]="TabContent3"></ng-template>
+                        </ng-template>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content p-3 text-muted">
+                    <div [ngbNavOutlet]="Nav"></div>
+                </div><!-- end tab content -->
+            </div><!-- end crad body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Vertical Nav Left Tabs</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul ngbNav #verticalNav="ngbNav" [activeId]="1" class="nav flex-column nav-pills">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                                    <p class="mt-3">Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby
+                                        sweater eu banh mi, qui irure terry richardson ex squid.</p>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                                    <p class="mt-3">Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip
+                                        jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                                        aesthetic magna 8-bit</p>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="3">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Messages</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                                    <p class="mt-3">DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+                                        pitchfork. Williamsburg banh mi whatever gluten-free.</p>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="4">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Settings</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent3"></ng-template>
+                                    <p class="mt-3">Fanny pack portland seitan DIY, art party locavore wolf cliche high
+                                        life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they
+                                        sold out farm-to-table.</p>
+                                </ng-template>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content text-muted mt-4 mt-md-0" id="v-pills-tabContent">
+                            <div [ngbNavOutlet]="verticalNav"></div>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Vertical Nav Right Tabs</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="tab-content text-muted mt-4 mt-md-0" id="v-r-pills-tabContent">
+                            <div [ngbNavOutlet]="verticaRightlNav"></div>
+                        </div>
+                    </div><!-- end col -->
+
+                    <div class="col-md-3">
+                        <ul ngbNav #verticaRightlNav="ngbNav" [activeId]="1" class="nav flex-column nav-pills">
+                            <li [ngbNavItem]="1">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                    <span class="d-none d-sm-block">Home</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent"></ng-template>
+                                    <p class="mt-3">Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby
+                                        sweater eu banh mi, qui irure terry richardson ex squid.</p>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="2">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                    <span class="d-none d-sm-block">Profile</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent1"></ng-template>
+                                    <p class="mt-3">Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip
+                                        jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                                        aesthetic magna 8-bit</p>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="3">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Messages</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent2"></ng-template>
+                                    <p class="mt-3">DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+                                        pitchfork. Williamsburg banh mi whatever gluten-free.</p>
+                                </ng-template>
+                            </li>
+                            <li [ngbNavItem]="4">
+                                <a ngbNavLink>
+                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                    <span class="d-none d-sm-block">Settings</span>
+                                </a>
+                                <ng-template ngbNavContent>
+                                    <ng-template [ngTemplateOutlet]="TabContent3"></ng-template>
+                                    <p class="mt-3">Fanny pack portland seitan DIY, art party locavore wolf cliche high
+                                        life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they
+                                        sold out farm-to-table.</p>
+                                </ng-template>
+                            </li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<!-- Collapse -->
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Default Collapse</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/collapse/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p>
+                    <button type="button" class="btn btn-primary" (click)="collapse.toggle()"
+                        [attr.aria-expanded]="!Collapsed" aria-controls="collapseExample">
+                        Link with href
+                    </button>
+                    <button type="button" class="btn btn-primary ms-2" (click)="collapse.toggle()"
+                        [attr.aria-expanded]="!Collapsed" aria-controls="collapseExample">
+                        Button with data-target
+                    </button>
+                </p>
+                <div #collapse="ngbCollapse" [(ngbCollapse)]="Collapsed">
+                    <div class="card">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Multiple Targets Collapse</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p>
+                    <button type="button" class="btn btn-primary" (click)="firstcollapse.toggle()"
+                        [attr.aria-expanded]="!firstColleaps" aria-controls="collapseExample1">
+                        Toggle first element
+                    </button>
+                    <button type="button" class="btn btn-primary ms-2" (click)="secondcollapse.toggle()"
+                        [attr.aria-expanded]="!secondColleaps" aria-controls="collapseExample1">
+                        Toggle second element
+                    </button>
+                    <button type="button" class="btn btn-primary ms-2" (click)="bothcollapse.toggle()"
+                        [attr.aria-expanded]="!secondColleaps" aria-controls="collapseExample1">
+                        Toggle both elements
+                    </button>
+                </p>
+
+                <div class="row" #bothcollapse="ngbCollapse" [(ngbCollapse)]="bothColleaps">
+                    <div class="col">
+                        <div class="collapse multi-collapse show" #firstcollapse="ngbCollapse"
+                            [(ngbCollapse)]="firstColleaps">
+                            <div class="card border shadow-none card-body text-muted mb-0">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="collapse multi-collapse show" #secondcollapse="ngbCollapse"
+                            [(ngbCollapse)]="secondColleaps">
+                            <div class="card border shadow-none card-body text-muted mb-0">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Accordion Example</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/accordion/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body general_faq accordion_exp">
+                <ngb-accordion #acc="ngbAccordion" activeIds="static-1" [closeOthers]="true">
+                    <ngb-panel id="static-1">
+                        <ng-template ngbPanelTitle class="accordion-header">
+                            <h2 class="accordion-header" id="gen-ques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#gen-ques-collapseOne" aria-expanded="false"
+                                    aria-controls="gen-ques-collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <strong>This is the first item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-2">
+                        <ng-template ngbPanelTitle class="accordion-header">
+                            <h2 class="accordion-header" id="gen-ques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#gen-ques-collapseOne" aria-expanded="false"
+                                    aria-controls="gen-ques-collapseOne">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
+                            the collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-3">
+                        <ng-template ngbPanelTitle class="accordion-header">
+                            <h2 class="accordion-header" id="gen-ques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#gen-ques-collapseOne" aria-expanded="false"
+                                    aria-controls="gen-ques-collapseOne">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                            collapse plugin adds the appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing and hiding via CSS
+                            transitions. You can modify any of this with custom CSS or overriding our default variables.
+                            It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Accordion Example Flush</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/accordion/examples" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body general_faq">
+                <ngb-accordion #acc="ngbAccordion" activeIds="static-1" [closeOthers]="true">
+                    <ngb-panel id="static-1">
+                        <ng-template ngbPanelTitle class="accordion-header">
+                            <h2 class="" id="gen-ques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#gen-ques-collapseOne" aria-expanded="false"
+                                    aria-controls="gen-ques-collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <div class="text-muted">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.</div>
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-2">
+                        <ng-template ngbPanelTitle class="accordion-header">
+                            <h2 class="accordion-header" id="gen-ques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#gen-ques-collapseOne" aria-expanded="false"
+                                    aria-controls="gen-ques-collapseOne">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <div class="text-muted">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.</div>
+                        </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="static-3">
+                        <ng-template ngbPanelTitle class="accordion-header">
+                            <h2 class="accordion-header" id="gen-ques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#gen-ques-collapseOne" aria-expanded="false"
+                                    aria-controls="gen-ques-collapseOne">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <div class="text-muted">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                                anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.</div>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div><!-- end card body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+
+
+<ng-template #TabContent>
+    <p class="mb-0">
+        Raw denim you probably haven't heard of them jean shorts Austin.
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+        butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+        qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+        iphone. Seitan aliquip quis cardigan american apparel, butcher
+        voluptate nisi qui.
+    </p>
+</ng-template>
+
+<!-- Tab Content -->
+<ng-template #TabContent1>
+    <p class="mb-0">
+        Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+        single-origin coffee squid. Exercitation +1 labore velit, blog
+        sartorial PBR leggings next level wes anderson artisan four loko
+        farm-to-table craft beer twee. Qui photo booth letterpress,
+        commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+        vinyl cillum PBR. Homo nostrud organic, assumenda labore
+        aesthetic magna delectus.
+    </p>
+</ng-template>
+
+<!-- Tab Content -->
+<ng-template #TabContent2>
+    <p class="mb-0">
+        Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack
+        lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore
+        carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred
+        pitchfork. Williamsburg banh mi whatever gluten yr.
+    </p>
+</ng-template>
+
+<!-- Tab Content -->
+<ng-template #TabContent3>
+    <p class="mb-0">
+        Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse
+        gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf
+        cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi bag before banksy hoodie
+        helvetica they sold out farm-to-table.
+    </p>
+</ng-template>

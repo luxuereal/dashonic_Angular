@@ -1,0 +1,18 @@
+::ng-deep .modal-holder {
+  .modal-content {
+    background-color: transparent;
+    color: white;
+    background: none;
+    border: none;
+  }
+
+  .modal-header {
+    border: none
+  }
+}
+
+.vimeo_video {
+    iframe {
+        width: 680px;
+    }
+}

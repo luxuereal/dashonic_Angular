@@ -1,0 +1,39 @@
+<!-- start page title -->
+<app-pagetitle title="Left Timeline" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="p-4">
+            <div class="verti-timeline left-timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-block">
+                        <div class="time-show-btn mt-0">
+                            <a href="javascript:void(0);" class="btn btn-danger btn-rounded w-lg">2021</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" *ngFor="let data of timelineData">
+                    <div class="timeline-block">
+                        <div class="timeline-box card">
+                            <div class="card-body">
+                                <div class="timeline-date">{{data.date}}</div>
+                                <h5 class="mt-3 font-size-16"> {{data.title}}</h5>
+                                <div class="text-muted">
+                                    <p class="mb-0">{{data.content}}</p>
+                                </div>
+                                <div class="timeline-album mt-3" *ngIf="data.image">
+                                    <a href="javascript:void(0);" *ngFor="let images of data.image">
+                                        <img src="{{images}}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end col -->
+</div>

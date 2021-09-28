@@ -1,0 +1,633 @@
+<!-- start page title -->
+<app-pagetitle title="File Manager" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="d-xl-flex">
+    <div class="w-100">
+        <div class="d-md-flex">
+            <div class="card filemanager-sidebar me-md-3">
+                <div class="card-body">
+
+                    <div class="d-flex flex-column h-100">
+                        <div class="mb-4">
+                            <ul class="list-unstyled categories-list">
+                                <li>
+                                    <div class="custom-accordion" >
+                                        <a class="text-body fw-medium py-1 d-flex align-items-center" (click)="toggle()"
+                                                    data-bs-toggle="collapse" href="javascript:void(0);" role="button"
+                                            aria-expanded="false" aria-controls="categories-collapse">
+                                            <i class="fas fa-folder text-warning font-size-13 me-2"></i> Files <i
+                                                class="mdi accor-down-icon ms-auto"
+                                                [ngClass]="{'mdi-chevron-up': isVisible, 'mdi-chevron-down': !isVisible}"
+                                                ></i>
+                                        </a>
+                                        <div class="collapse" id="categories-collapse" [ngClass]="{'show': isVisible}">
+                                            <div class="card border-0 shadow-none ps-2 mb-0">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li><a href="javascript:void(0);"
+                                                            class="d-flex align-items-center"><span
+                                                                class="me-auto">Design</span></a></li>
+                                                    <li><a href="javascript:void(0);"
+                                                            class="d-flex align-items-center"><span
+                                                                class="me-auto">Development</span> <i
+                                                                class="fas fa-map-pin font-size-10 ms-auto"></i></a>
+                                                    </li>
+                                                    <li><a href="javascript:void(0);"
+                                                            class="d-flex align-items-center"><span
+                                                                class="me-auto">Project A</span></a></li>
+                                                    <li><a href="javascript:void(0);"
+                                                            class="d-flex align-items-center"><span
+                                                                class="me-auto">Admin</span> <i
+                                                                class="fas fa-map-pin font-size-10 ms-auto"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body d-flex align-items-center">
+                                        <i class="fab fa-google-drive text-muted font-size-13 me-2"></i> <span
+                                            class="me-auto">Google Drive</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body d-flex align-items-center">
+                                        <i class="fab fa-dropbox font-size-13 me-2 text-primary"></i> <span
+                                            class="me-auto">Dropbox</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body d-flex align-items-center">
+                                        <i class="fas fa-share-alt text-muted font-size-13 me-2"></i> <span
+                                            class="me-auto">Shared</span> <i
+                                            class="mdi mdi-circle-medium text-danger ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body d-flex align-items-center">
+                                        <i class="far fa-star text-muted font-size-13 me-2"></i> <span
+                                            class="me-auto">Starred</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body d-flex align-items-center">
+                                        <i class="fas fa-trash-alt text-danger font-size-13 me-2"></i> <span
+                                            class="me-auto">Trash</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);" class="text-body d-flex align-items-center">
+                                        <i class="fas fa-cog text-muted font-size-13 me-2"></i> <span
+                                            class="me-auto">Setting</span><span
+                                            class="badge bg-success rounded-pill ms-2">01</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="alert alert-info alert-dismissible fade show mb-0" id="alertremove" role="alert">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close" (click)="remove()"></button>
+                                <div class="mb-3">
+                                    <i class="fas fa-folder-open h1 text-info"></i>
+                                </div>
+
+                                <div>
+                                    <h5 class="text-info">Upgrade Features</h5>
+                                    <p>Upgrade your plan from a <span class="fw-semibold">Free
+                                            trial</span>, to ‘Premium Plan’</p>
+                                    <div class="text-center mt-4">
+                                        <a routerLink="/pricing/basic"
+                                            class="btn btn-link text-decoration-none text-info w-100 shadow-none">Upgrade
+                                            <i class="mdi mdi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end cardbody-->
+            </div><!-- end card -->
+            <!-- filemanager-leftsidebar -->
+
+            <div class="w-100">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <div class="row mb-3">
+                                <div class="col-lg-4 col-sm-6">
+                                    <div class="search-box mb-2">
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control bg-light border-light rounded"
+                                                placeholder="Search...">
+                                            <i class="uil uil-search search-icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-sm-6">
+                                    <div class="mt-4 mt-sm-0 d-flex align-items-center justify-content-sm-end">
+                                        <div class="mb-2 me-2">
+                                            <div class="dropdown" ngbDropdown placement="bottom-right">
+                                                <button class="btn btn-primary dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                    ngbDropdownToggle>
+                                                    <i class="uil uil-plus me-1"></i> Create New
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <a class="dropdown-item" href="javascript:void(0);"><i
+                                                            class="uil uil-folder me-1"></i> Folder</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);"><i
+                                                            class="uil uil-file me-1"></i>
+                                                        File</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown mb-0" ngbDropdown placement="bottom-right">
+                                            <a class="btn btn-link text-muted dropdown-toggle p-1 mt-n2" role="button"
+                                                data-bs-toggle="dropdown" aria-haspopup="true" ngbDropdownToggle>
+                                                <i class="uil uil-ellipsis-v font-size-20"></i>
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                <a class="dropdown-item" href="javascript:void(0);">Share Files</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Share with me</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Other Actions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="row">
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card shadow-none border">
+                                        <div class="card-body p-3">
+                                            <div>
+                                                <div class="float-end ms-2">
+                                                    <div class="dropdown mb-2" ngbDropdown placement="bottom-right">
+                                                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            ngbDropdownToggle>
+                                                            <i class="uil uil-ellipsis-h"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Rename</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-sm me-3 mb-3">
+                                                    <div class="avatar-title bg-transparent rounded">
+                                                        <i class="fab fa-google-drive font-size-24 text-muted"></i>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5 class="font-size-14 text-truncate"><a
+                                                            href="javascript: void(0);" class="text-body">Google
+                                                            Drive</a></h5>
+                                                    <div class="mt-3">
+                                                        <p class="text-muted font-size-13 mb-1">20GB of 50GB used</p>
+                                                        <div class="progress animated-progess custom-progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card shadow-none border">
+                                        <div class="card-body p-3">
+                                            <div>
+                                                <div class="float-end ms-2">
+                                                    <div class="dropdown mb-2" ngbDropdown placement="bottom-right">
+                                                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            ngbDropdownToggle>
+                                                            <i class="uil uil-ellipsis-h"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Rename</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-sm me-3 mb-3">
+                                                    <div class="avatar-title bg-transparent rounded">
+                                                        <i class="fab fa-dropbox font-size-24 text-primary"></i>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5 class="font-size-14 text-truncate"><a
+                                                            href="javascript: void(0);" class="text-body">Dropbox</a>
+                                                    </h5>
+                                                    <div class="mt-3">
+                                                        <p class="text-muted font-size-13 mb-1">15GB of 40GB used</p>
+                                                        <div class="progress animated-progess custom-progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card shadow-none border">
+                                        <div class="card-body p-3">
+                                            <div>
+                                                <div class="float-end ms-2">
+                                                    <div class="dropdown mb-2" ngbDropdown placement="bottom-right">
+                                                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            ngbDropdownToggle>
+                                                            <i class="uil uil-ellipsis-h"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Rename</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-sm me-3 mb-3">
+                                                    <div class="avatar-title bg-transparent rounded">
+                                                        <i class="fas fa-folder-open font-size-24 text-warning"></i>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h5 class="font-size-14 text-truncate"><a
+                                                            href="javascript: void(0);" class="text-body">Drive</a></h5>
+                                                    <div class="mt-3">
+                                                        <p class="text-muted font-size-13 mb-1">12GB of 30GB used</p>
+                                                        <div class="progress animated-progess custom-progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                            </div><!-- end row -->
+                        </div>
+
+                        <div class="mt-4">
+                            <div class="d-flex flex-wrap">
+                                <h5 class="font-size-16 me-3">Folder</h5>
+
+                                <div class="ms-auto">
+                                    <a href="javascript: void(0);" class="fw-medium text-reset">View All</a>
+                                </div>
+                            </div>
+                            <hr class="mt-2">
+
+                            <div class="row">
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card shadow-none border">
+                                        <div class="card-body p-3">
+                                            <div class="">
+                                                <div class="float-end ms-2">
+                                                    <div class="dropdown mb-2" ngbDropdown placement="bottom-right">
+                                                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            ngbDropdownToggle>
+                                                            <i class="uil uil-ellipsis-h"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Rename</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-sm me-3 mb-3">
+                                                    <div class="avatar-title bg-transparent rounded">
+                                                        <i class="fas fa-folder font-size-24 text-warning"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="overflow-hidden me-auto">
+                                                        <h5 class="font-size-14 text-truncate mb-1"><a
+                                                                href="javascript: void(0);" class="text-body">Design</a>
+                                                        </h5>
+                                                        <p class="text-muted text-truncate mb-0">12 Files</p>
+                                                    </div>
+                                                    <div class="align-self-end ms-2">
+                                                        <p class="text-muted mb-0">6GB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body-->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card shadow-none border">
+                                        <div class="card-body p-3">
+                                            <div class="">
+                                                <div class="float-end ms-2">
+                                                    <div class="dropdown mb-2" ngbDropdown placement="bottom-right">
+                                                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            ngbDropdownToggle>
+                                                            <i class="uil uil-ellipsis-h"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Rename</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="avatar-sm me-3 mb-3">
+                                                    <div class="avatar-title bg-transparent rounded">
+                                                        <i class="fas fa-folder font-size-24 text-warning"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="overflow-hidden me-auto">
+                                                        <h5 class="font-size-14 text-truncate mb-1"><a
+                                                                href="javascript: void(0);"
+                                                                class="text-body">Development</a></h5>
+                                                        <p class="text-muted text-truncate mb-0">20 Files</p>
+                                                    </div>
+                                                    <div class="align-self-end ms-2">
+                                                        <p class="text-muted mb-0">8GB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body-->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card shadow-none border">
+                                        <div class="card-body p-3">
+                                            <div class="">
+                                                <div class="float-end ms-2">
+                                                    <div class="dropdown mb-2" ngbDropdown placement="bottom-right"> 
+                                                        <a class="font-size-16 text-muted dropdown-toggle" role="button"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            ngbDropdownToggle>
+                                                            <i class="uil uil-ellipsis-h"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Rename</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div><!-- end dropdown -->
+                                                </div>
+                                                <div class="avatar-sm me-3 mb-3">
+                                                    <div class="avatar-title bg-transparent rounded">
+                                                        <i class="fas fa-folder font-size-24 text-warning"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="overflow-hidden me-auto">
+                                                        <h5 class="font-size-14 text-truncate mb-1"><a
+                                                                href="javascript: void(0);" class="text-body">Project
+                                                                A</a></h5>
+                                                        <p class="text-muted text-truncate mb-0">06 Files</p>
+                                                    </div>
+                                                    <div class="align-self-end ms-2">
+                                                        <p class="text-muted mb-0">2GB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- end card body -->
+                                    </div><!-- end card -->
+                                </div><!-- end col -->
+                            </div><!-- end row -->
+                        </div>
+
+                        <div class="mt-4">
+                            <div class="d-flex flex-wrap">
+                                <h5 class="font-size-16 me-3">Recent Files</h5>
+
+                                <div class="ms-auto">
+                                    <a href="javascript: void(0);" class="fw-medium text-reset">View All</a>
+                                </div>
+                            </div>
+                            <hr class="mt-2">
+
+                            <div class="table-responsive">
+                                <table class="table align-middle table-nowrap table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Date Modified</th>
+                                            <th scope="col" colspan="2">Size</th>
+                                        </tr><!-- end tr -->
+                                    </thead><!-- end thead -->
+                                    <tbody>
+                                        <tr *ngFor="let data of recent">
+                                            <td><a href="javascript: void(0);" class="text-dark fw-medium"><i
+                                                        class="{{data.icon}} align-middle me-2"></i>
+                                                    {{data.name}}</a></td>
+                                            <td>{{data.date}}</td>
+                                            <td>{{data.size}}</td>
+                                            <td>
+                                                <div class="dropdown" ngbDropdown placement="bottom-right">
+                                                    <a href="javascript:void(0);" class="font-size-16 text-muted dropdown-toggle"
+                                                        ngbDropdownToggle>
+                                                        <i class="uil uil-ellipsis-h"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Open</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Rename</a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Remove</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end tr -->
+                                    </tbody><!-- end tbody -->
+                                </table><!-- end table -->
+                            </div><!-- end table responsive -->
+                        </div>
+                    </div><!-- end cardbody-->
+                </div><!-- end card -->
+            </div><!-- end w-100 -->
+        </div>
+    </div>
+
+    <div class="card filemanager-sidebar ms-lg-3">
+        <div class="card-body">
+            <div class="text-center">
+                <h5 class="font-size-15 mb-4">Storage</h5>
+                <apx-chart class="apex-charts mt-3" dir="ltr" [series]="storageChart.series"
+                        [chart]="storageChart.chart" [colors]="storageChart.colors" [plotOptions]="storageChart.plotOptions"
+                        [grid]="storageChart.grid" [labels]="storageChart.labels">
+                    </apx-chart>
+
+                <p class="text-muted mt-4">48.02 GB (76%) of 64 GB used</p>
+            </div>
+
+            <div class="mt-4">
+                <div class="card border shadow-none mb-2">
+                    <a href="javascript: void(0);" class="text-body">
+                        <div class="p-2">
+                            <div class="d-flex">
+                                <div class="avatar-sm align-self-center me-2">
+                                    <div class="avatar-title rounded bg-transparent text-success font-size-18">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-hidden me-auto">
+                                    <h5 class="font-size-13 text-truncate mb-1">Images</h5>
+                                    <p class="text-muted text-truncate mb-0">176 Files</p>
+                                </div>
+
+                                <div class="ms-2">
+                                    <p class="text-muted">6 GB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- end card -->
+
+                <div class="card border shadow-none mb-2">
+                    <a href="javascript: void(0);" class="text-body">
+                        <div class="p-2">
+                            <div class="d-flex">
+                                <div class="avatar-sm align-self-center me-2">
+                                    <div class="avatar-title rounded bg-transparent text-danger font-size-18">
+                                        <i class="far fa-play-circle"></i>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-hidden me-auto">
+                                    <h5 class="font-size-13 text-truncate mb-1">Video</h5>
+                                    <p class="text-muted text-truncate mb-0">45 Files</p>
+                                </div>
+
+                                <div class="ms-2">
+                                    <p class="text-muted">4.1 GB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- end card -->
+
+                <div class="card border shadow-none mb-2">
+                    <a href="javascript: void(0);" class="text-body">
+                        <div class="p-2">
+                            <div class="d-flex">
+                                <div class="avatar-sm align-self-center me-2">
+                                    <div class="avatar-title rounded bg-transparent text-info font-size-18">
+                                        <i class="fas fa-music"></i>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-hidden me-auto">
+                                    <h5 class="font-size-13 text-truncate mb-1">Music</h5>
+                                    <p class="text-muted text-truncate mb-0">21 Files</p>
+                                </div>
+
+                                <div class="ms-2">
+                                    <p class="text-muted">3.2 GB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- end card -->
+
+                <div class="card border shadow-none mb-2">
+                    <a href="javascript: void(0);" class="text-body">
+                        <div class="p-2">
+                            <div class="d-flex">
+                                <div class="avatar-sm align-self-center me-2">
+                                    <div class="avatar-title rounded bg-transparent text-primary font-size-18">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-hidden me-auto">
+                                    <h5 class="font-size-13 text-truncate mb-1">Document</h5>
+                                    <p class="text-muted text-truncate mb-0">21 Files</p>
+                                </div>
+
+                                <div class="ms-2">
+                                    <p class="text-muted">2 GB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- end card -->
+
+                <div class="card border shadow-none">
+                    <a href="javascript: void(0);" class="text-body">
+                        <div class="p-2">
+                            <div class="d-flex">
+                                <div class="avatar-sm align-self-center me-2">
+                                    <div class="avatar-title rounded bg-transparent text-warning font-size-18">
+                                        <i class="fas fa-folder"></i>
+                                    </div>
+                                </div>
+
+                                <div class="overflow-hidden me-auto">
+                                    <h5 class="font-size-13 text-truncate mb-1">Others</h5>
+                                    <p class="text-muted text-truncate mb-0">20 Files</p>
+                                </div>
+
+                                <div class="ms-2">
+                                    <p class="text-muted">1.4 GB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- end card -->
+            </div>
+        </div><!-- end card body -->
+    </div><!-- end card -->
+</div><!-- end row -->

@@ -1,0 +1,120 @@
+<!-- start page title -->
+<app-pagetitle title="Alerts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Default Alerts</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/alert/examples" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div class="">
+                    <div *ngFor="let color of alertData">
+                        <ngb-alert [dismissible]="false" type="{{color.color}}">
+                            A simple {{color.color}} alert—check it out!
+                        </ngb-alert>
+                    </div>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Alerts with Icon</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/alert/examples" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div *ngFor="let color of alertData">
+                    <ngb-alert type="{{color.color}}" (close)="close(color, alertData)" class="custom-alert">
+                        <i class="uil {{color.icon}} me-2"></i>
+                        A simple {{color.color}} alert—check it out!
+                    </ngb-alert>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Dismissing Alerts</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/alert/examples" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div *ngFor="let color of alertData">
+                    <ngb-alert type="{{color.color}}" (close)="close(color, alertData)" class="custom-alert">
+                        A simple {{color.color}} alert—check it out!
+                    </ngb-alert>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Alerts Link Color</h4>
+                <a href="https://ng-bootstrap.github.io/#/components/alert/examples" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div *ngFor="let color of alertData">
+                    <ngb-alert [dismissible]="false" type="{{color.color}}">
+                        A simple {{color.color}} alert with <a href="https://ng-bootstrap.github.io/#/components/alert/examples" target="_blank" class="alert-link">an example
+                            link</a>. Give it a click if you like.
+                    </ngb-alert>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Border Alerts</h4>
+                <p class="m-0 badge badge-soft-primary py-2">Dashonic Only</p>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div *ngFor="let color of alertData">
+                    <ngb-alert type="{{color.color}}" (close)="close(color, alertData)"
+                        class="alert alert-primary alert-top-border alert-dismissible fade show custom-alert">
+                        <i class="uil {{color.icon}} text-{{color.color}} font-size-16 me-2"></i>
+                        A simple border {{color.color}} alert
+                    </ngb-alert>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Outline Alerts</h4>
+                <p class="m-0 badge badge-soft-primary py-2">Dashonic Only</p>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div *ngFor="let color of alertData">
+                    <ngb-alert type="{{color.color}}" (close)="close(color, alertData)"
+                        class="alert alert-primary alert-outline alert-dismissible fade show custom-alert">
+                        <i class="uil {{color.icon}} text-{{color.color}} font-size-16 me-2"></i>
+                        A simple outline {{color.color}} alert
+                    </ngb-alert>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->

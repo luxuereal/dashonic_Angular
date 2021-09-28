@@ -1,0 +1,43 @@
+<!-- start page title -->
+<app-pagetitle title="Polararea Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic-Polar Area Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/polar-area-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="basic_polar_area" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="basicPolarChart.series" [chart]="basicPolarChart.chart"
+                        [labels]="basicPolarChart.labels" [stroke]="basicPolarChart.stroke"
+                        [fill]="basicPolarChart.fill" [legend]="basicPolarChart.legend"
+                        [colors]="basicPolarChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Polar-Area Monochrome</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/polar-area-charts/monochrome/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="monochrome_polar_area" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="monochromeChart.series" [chart]="monochromeChart.chart"
+                        [labels]="monochromeChart.labels" [title]="monochromeChart.title"
+                        [theme]="monochromeChart.theme" [fill]="monochromeChart.fill" [yaxis]="monochromeChart.yaxis"
+                        [stroke]="monochromeChart.stroke" [legend]="monochromeChart.legend"
+                        [plotOptions]="monochromeChart.plotOptions"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->

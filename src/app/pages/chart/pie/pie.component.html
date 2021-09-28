@@ -1,0 +1,141 @@
+<!-- start page title -->
+<app-pagetitle title="Pie Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Simple Pie Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/pie-charts/simple-pie/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="simple_pie_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="simplePieChart.series" [chart]="simplePieChart.chart"
+                        [labels]="simplePieChart.labels" [legend]="simplePieChart.legend"
+                        [dataLabels]="simplePieChart.dataLabels" [responsive]="simplePieChart.responsive"
+                        [colors]="simplePieChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Simple Donut Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/pie-charts/simple-donut/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="simple_dount_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="simpleDonutChart.series" [chart]="simpleDonutChart.chart"
+                        [labels]="simpleDonutChart.labels" [responsive]="simpleDonutChart.responsive"
+                        [legend]="simpleDonutChart.legend" [dataLabels]="simpleDonutChart.dataLabels"
+                        [colors]="simpleDonutChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Semi Donut</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/pie-charts/semi-donut/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="monochrome_pie_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="semiDonutChart.series" [chart]="semiDonutChart.chart"
+                        [labels]="semiDonutChart.labels" [grid]="semiDonutChart.grid"
+                        [plotOptions]="semiDonutChart.plotOptions" [legend]="semiDonutChart.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Monochrome Pie Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/pie-charts/monochrome-pie/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="monochrome_pie_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="monochromePieChart.series" [chart]="monochromePieChart.chart"
+                        [labels]="monochromePieChart.labels" [title]="monochromePieChart.title"
+                        [theme]="monochromePieChart.theme" [legend]="monochromePieChart.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Gradient Donut Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/pie-charts/gradient-donut/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="gradient_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="gradientDonutChart.series" [chart]="gradientDonutChart.chart"
+                        [plotOptions]="gradientDonutChart.plotOptions" [dataLabels]="gradientDonutChart.dataLabels"
+                        [fill]="gradientDonutChart.fill" [title]="gradientDonutChart.title"
+                        [legend]="gradientDonutChart.legend" [colors]="gradientDonutChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Patterned Donut Chart</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/pie-charts/donut-with-pattern/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="pattern_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="patternedDonutChart.series" [chart]="patternedDonutChart.chart"
+                        [stroke]="patternedDonutChart.stroke" [plotOptions]="patternedDonutChart.plotOptions"
+                        [labels]="patternedDonutChart.labels" [dataLabels]="patternedDonutChart.dataLabels"
+                        [fill]="patternedDonutChart.fill" [states]="patternedDonutChart.states"
+                        [theme]="patternedDonutChart.theme" [title]="patternedDonutChart.title"
+                        [legend]="patternedDonutChart.legend" [colors]="patternedDonutChart.colors"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Pie Chart with Image Fill</h4>
+                <a href="javascript:void(0);" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <div id="image_pie_chart" class="apex-charts" dir="ltr">
+                    <apx-chart [series]="pieWithImageChart.series" [chart]="pieWithImageChart.chart"
+                        [colors]="pieWithImageChart.colors" [fill]="pieWithImageChart.fill"
+                        [stroke]="pieWithImageChart.stroke" [dataLabels]="pieWithImageChart.dataLabels"
+                        [legend]="pieWithImageChart.legend"></apx-chart>
+                </div>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div>

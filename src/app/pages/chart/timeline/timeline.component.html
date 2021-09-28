@@ -1,0 +1,78 @@
+<!-- start page title -->
+<app-pagetitle title="Timeline Charts" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Basic TimeLine Charts</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/timeline-charts/basic/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="basicTimelineChart.series" [chart]="basicTimelineChart.chart"
+                    [plotOptions]="basicTimelineChart.plotOptions" [xaxis]="basicTimelineChart.xaxis"
+                    [colors]="basicTimelineChart.colors"></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Different Color For Each Bar</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/timeline-charts/distributed/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="differentColorChart.series" [chart]="differentColorChart.chart"
+                    [fill]="differentColorChart.fill" [grid]="differentColorChart.grid"
+                    [dataLabels]="differentColorChart.dataLabels" [plotOptions]="differentColorChart.plotOptions"
+                    [xaxis]="differentColorChart.xaxis" [yaxis]="differentColorChart.yaxis"></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Multi Series Timeline</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/timeline-charts/multi-series/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <apx-chart [series]="multiSeriesTimelineChart.series" [chart]="multiSeriesTimelineChart.chart"
+                    [dataLabels]="multiSeriesTimelineChart.dataLabels"
+                    [plotOptions]="multiSeriesTimelineChart.plotOptions" [xaxis]="multiSeriesTimelineChart.xaxis"
+                    [legend]="multiSeriesTimelineChart.legend" [colors]="multiSeriesTimelineChart.colors"></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Advanced Timeline (Multiple Range)</h4>
+                <a href="https://apexcharts.com/angular-chart-demos/timeline-charts/advanced/" target="_blank"
+                    class="btn btn-sm btn-soft-secondary">Docs <i class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                    <apx-chart
+    [series]="advancedTimelineChart.series"
+    [chart]="advancedTimelineChart.chart"
+    [fill]="advancedTimelineChart.fill"
+    [legend]="advancedTimelineChart.legend"
+    [plotOptions]="advancedTimelineChart.plotOptions"
+    [xaxis]="advancedTimelineChart.xaxis"
+    [stroke]="advancedTimelineChart.stroke"
+    [colors]="advancedTimelineChart.colors"
+  ></apx-chart>
+            </div>
+        </div>
+        <!--end card-->
+    </div><!-- end col -->
+</div><!-- end row -->
