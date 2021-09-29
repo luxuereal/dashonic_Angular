@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Lightbox } from 'ngx-lightbox';
 
 import { projectsGrid } from './gallery.model';
 import { projectGrid } from './data';
@@ -19,7 +20,25 @@ export class GalleryComponent implements OnInit {
   projectGrid!: projectsGrid[];
   galleryFilter = 'all';
 
-  constructor() { }
+  images: { src: string; thumb: string; }[] = [];
+
+  constructor(private _lightbox: Lightbox) { 
+    projectGrid.forEach((el) => {
+      const src = el.image;
+      const thumb = el.image;
+      const album = {
+        src,
+        thumb
+      };
+      this.images.push(album);
+    });
+  }
+
+  openImage(index: any) {
+    this._lightbox.open(this.images, index, {
+      showZoom: true
+    });
+  }
 
   ngOnInit(): void {
     /**

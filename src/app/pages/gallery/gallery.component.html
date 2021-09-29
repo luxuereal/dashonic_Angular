@@ -35,14 +35,13 @@
 
                         <div class="row gallery-wrapper">
                             <div class="element-item col-xl-4 col-sm-6 photography" data-category="photography"
-                                *ngFor="let data of projectGrid">
+                                *ngFor="let data of projectGrid; let i = index">
                                 <div class="gallery-box card">
                                     <div class="gallery-container">
-                                        <a class="image-popup" href="javascript:void(0);" title="">
+                                        <a class="image-popup" href="javascript:void(0);" title="" (click)="openImage(i)"> 
                                             <img class="gallery-img img-fluid mx-auto" src="{{data.image}}" alt="" />
                                             <div class="gallery-overlay"></div>
                                         </a>
-
                                     </div>
 
                                     <div class="box-content p-3">

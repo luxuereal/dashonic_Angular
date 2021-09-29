@@ -10,6 +10,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DndModule } from 'ngx-drag-drop';
+import { LightboxModule } from 'ngx-lightbox';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -80,7 +81,8 @@ FullCalendarModule.registerPlugins([
     IconsModule,
     MapsModule,
     ChartModule,
-    DndModule
+    DndModule,
+    LightboxModule
   ]
 })
 export class PagesModule { }

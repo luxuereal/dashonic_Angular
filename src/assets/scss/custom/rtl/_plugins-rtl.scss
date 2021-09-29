@@ -75,3 +75,23 @@
         border-right: 1px solid rgba($white, 0.5) !important;
     }
 }
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  left: auto;
+  right: 0;
+  padding-right: 10px;
+  padding-left: 50px;
+}
+.ng-select .ng-select-container .ng-value-container{
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.ng-select .ng-arrow-wrapper{
+  padding-right: 0;
+  padding-left: 5px;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon.left{
+  float: left;
+}

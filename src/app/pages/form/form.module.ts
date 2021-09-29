@@ -46,7 +46,9 @@ const DEFAULT_DROPZONE_CONFIG: DropzoneConfigInterface = {
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    UiSwitchModule,
+    UiSwitchModule.forRoot({
+      size: 'small'
+    }),
     ColorPickerModule,
     NgSelectModule,
     NgbDatepickerModule,

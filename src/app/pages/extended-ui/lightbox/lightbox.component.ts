@@ -17,6 +17,7 @@ export class LightboxComponent implements OnInit {
   breadCrumbItems!: Array<{}>;
   images: { src: string; thumb: string; caption: string }[] = [];
   gallery: { src: string; thumb: string; caption: string }[] = [];
+
   id = 'JlvxDa7Sges';
 
   constructor(private lightbox: Lightbox, private modalService: NgbModal) {
@@ -69,7 +70,6 @@ export class LightboxComponent implements OnInit {
     this.lightbox.open(this.images, index, {
       showZoom: true
     });
-
   }
 
   /**

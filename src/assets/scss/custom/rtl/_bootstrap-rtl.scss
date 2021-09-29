@@ -7,8 +7,13 @@
 
 .dropdown-menu{
     text-align: right;
-    // left: auto !important;
-    // transform: translate(9px, 23px) !important;
+    left: auto !important;
+    right: 0 !important;
+
+    &[x-placement="bottom-right"]{
+        right: auto !important;
+        left: 0 !important;
+    }
 }
 
 .dropdown-menu-end {
