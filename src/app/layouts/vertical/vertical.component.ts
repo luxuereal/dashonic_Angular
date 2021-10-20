@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: 'app-vertical',
@@ -13,7 +14,13 @@ export class VerticalComponent implements OnInit {
 
   isCondensed = false;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.events.forEach((event) => {
+      if (event instanceof NavigationEnd) {
+        document.body.classList.remove('sidebar-enable');
+      }
+    });
+  }
 
   ngOnInit(): void {
     document.body.setAttribute('data-layout', 'vertical');

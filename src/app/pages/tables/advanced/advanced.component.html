@@ -87,10 +87,32 @@
                     </div>
                     <!-- End Pagination -->
                 </div>
+
+                
+
+                <div class="row">
+                    <div class="col-md-4">
+                       <!-- <input *ngIf="config.filtering" placeholder="Filter all columns"
+                             [ngTableFiltering]="config.filtering"
+                             class="form-control"
+                             (tableChanged)="onChangeTable(config)" />  -->
+                    </div>
+                  </div>
             </div>
             <!-- end card body -->
         </div>
         <!-- end card -->
+
+        <div class="card">
+            <div class="card-header justify-content-between d-flex align-items-center">
+                <h4 class="card-title">Editable Table</h4>
+                <a href="https://github.com/akveo/ng2-smart-table" target="_blank" class="btn btn-sm btn-soft-secondary">Docs <i
+                        class="mdi mdi-arrow-right align-middle"></i></a>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <ng2-smart-table [settings]="settings" [source]="editableTable"></ng2-smart-table>
+            </div>
+        </div>
     </div>
     <!-- end col -->
 </div>

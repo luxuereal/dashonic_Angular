@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="dropdown dropdown-mega d-none d-lg-block" ngbDropdown placement="bottom-left">
+            <div class="dropdown dropdown-mega d-none d-lg-block" ngbDropdown>
                 <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="false"
                     aria-expanded="false" ngbDropdownToggle>
                     <span>{{'TOPBAR.CATEGORIES.TEXT' | translate}}</span>
@@ -120,7 +120,7 @@
                     aria-expanded="false" ngbDropdownToggle>
                     <i-feather class="icon-sm" name="search"></i-feather>
                 </button>
-                <div class="dropdown-menu dropdown-menu-lg p-0" ngbDropdownMenu>
+                <div class="dropdown-menu dropdown-menu-lg p-0 dropdown-menu-end" ngbDropdownMenu>
                     <form class="p-2">
                         <div class="search-box">
                             <div class="position-relative">
@@ -140,7 +140,6 @@
                     <img *ngIf="flagvalue === undefined" src="{{valueset}}" alt="Header Language" height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item" *ngFor="let item of listLang"
                         (click)="setLanguage(item.text, item.lang, item.flag)"

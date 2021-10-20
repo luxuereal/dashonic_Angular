@@ -31,7 +31,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     this.layoutMode = LAYOUT_MODE;
     // default settings
-    this.layoutType = LAYOUT_VERTICAL;
+    this.layoutType = LAYOUT_HORIZONTAL;
     this.layoutwidth = LAYOUT_WIDTH;
     this.layoutposition = LAYOUT_POSITION;
     this.sidebarcolor = SIDEBAR_COLOR;

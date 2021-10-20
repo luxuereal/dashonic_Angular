@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { TablesRoutingModule } from './tables-routing.module';
 import { SharedModule } from '../../shared/shared.module';
@@ -20,6 +21,7 @@ import { AdvancedComponent } from './advanced/advanced.component';
     SharedModule,
     NgbPaginationModule,
     NgbTypeaheadModule,
+    Ng2SmartTableModule,
     FormsModule
   ]
 })

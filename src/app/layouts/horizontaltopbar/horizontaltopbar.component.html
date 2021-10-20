@@ -139,7 +139,6 @@
                     <img *ngIf="flagvalue === undefined" src="{{valueset}}" alt="Header Language" height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
-
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item" *ngFor="let item of listLang"
                         (click)="setLanguage(item.text, item.lang, item.flag)"
@@ -424,7 +423,6 @@
                                     <i-feather name="{{ item.icon }}"></i-feather>{{ item.label | translate}} <div
                                         class="arrow-down" *ngIf="hasItems(item)"></div>
                                 </a>
-
                                 <a *ngIf="item.subItems" class="nav-link dropdown-toggle arrow-none"
                                     (click)="onMenuClick($event)" href="javascript: void(0);" id="topnav-components"
                                     role="button">
@@ -432,13 +430,21 @@
                                     {{item.label | translate }}
                                     <div class="arrow-down"></div>
                                 </a>
-
-                                <div class="dropdown-menu" aria-labelledby="topnav-dashboard" *ngIf="hasItems(item)">
-                                    <ng-template ngFor let-i="index" let-subitem [ngForOf]="item.subItems">
-                                        <a class="col dropdown-item side-nav-link-ref" *ngIf="!hasItems(subitem)"
-                                            href="javascript: void(0);" [routerLink]="subitem.link"
-                                            routerLinkActive="active">{{subitem.label | translate }}</a>
-
+                                
+                                <div class="dropdown-menu " [ngClass]="{'dropdown-mega-menu-xl':  item.subItems.length > 11}"  aria-labelledby="topnav-dashboard" *ngIf="hasItems(item)">
+                                        <ng-template ngFor let-i="index" let-subitem [ngForOf]="item.subItems">
+                                            <a *ngIf="item.subItems.length < 11 && !hasItems(subitem)" class="col dropdown-item side-nav-link-ref"
+                                            [routerLink]="subitem.link"
+                                            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                             {{subitem.label | translate }}
+                                        </a>
+                                        <div *ngIf="item.subItems.length > 11">
+                                            <div *ngIf="i % 3 == 0" class="row">
+                                                <div class="col-lg-4"><a class="dropdown-item side-nav-link-ref" routerLinkActive="active" [routerLink]="subitem.link">{{item.subItems[i].label | translate}}</a></div>
+                                                <div class="col-lg-4"><a class="dropdown-item side-nav-link-ref" routerLinkActive="active" [routerLink]="item.subItems[i + 1]?.link">{{item.subItems[i + 1]?.label | translate}}</a></div>
+                                                <div class="col-lg-4"><a class="dropdown-item side-nav-link-ref" routerLinkActive="active" [routerLink]="item.subItems[i + 2]?.link">{{item.subItems[i + 2]?.label | translate}}</a></div>
+                                            </div>
+                                        </div>
                                         <div class="dropdown" *ngIf="hasItems(subitem)">
                                             <a class="dropdown-item dropdown-toggle" href="javascript: void(0);"
                                                 (click)="onMenuClick($event)">{{ subitem.label | translate }}
